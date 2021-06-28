@@ -1,4 +1,4 @@
-# Introduction {\#intro}
+# Introduction
 
 > *"We have become, by the power of a glorious evolutionary accident called intelligence, the stewards of life's continuity on earth. We did not ask for this role, but we cannot abjure it. We may not be suited to it, but here we are."*
 >
@@ -16,7 +16,7 @@ Biodiversity: patterns and processes...
 
 ## Biodiversity
 
-(Biodiversity)[<https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Beta-diversity.ipynb>]
+[Biodiversity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Beta-diversity.ipynb)
 
 ## Historical, neutral, and niche theories
 
