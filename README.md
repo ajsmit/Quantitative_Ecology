@@ -44,7 +44,7 @@ Biodiversity: patterns and processes...
 
 -   Correlations and associations
 
-### Ordinations
+## Ordinations
 
 -   Principal components analysis (PCA)
 
@@ -57,4 +57,3 @@ Biodiversity: patterns and processes...
 -   Redundancy analysis (RDA)
 
 -   Canonical correspondence analysis (CCA)
-
