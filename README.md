@@ -14,20 +14,47 @@ Biodiversity: patterns and processes...
 
 # Content
 
-[Ecological data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/ecological_data.ipynb) -- incomplete
+## Introduction
 
-[Data properties](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/data_properties.ipynb) -- incomplete
+-   [Ecological data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/ecological_data.ipynb) -- incomplete
 
-[What do we do with the data?](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/doing_data.ipynb) -- incomplete
+-   [Data properties](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/data_properties.ipynb) -- incomplete
 
-[Exploring the data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/exploring_data.ipynb) -- incomplete
+-   [What do we do with the data?](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/doing_data.ipynb) -- incomplete
 
-[Biodiversity](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Beta-diversity.ipynb)
-
-## To follow:
-
--   Historical, neutral, and niche theories
+-   [Exploring the data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/exploring_data.ipynb) -- incomplete
 
 -   Where do ecological data come from?
 
-## What do we do with these data?
+-   What do we do with these data?
+
+## Biodiversity
+
+-   [Biodiversity](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Beta-diversity.ipynb)
+
+-   What structures biodiversity: patterns in space (and time)?
+
+-   Historical, neutral, and niche theories
+
+## Matrices
+
+-   Distance matrices: environmental variables
+
+-   Dissimilarity matrices: species
+
+-   Correlations and associations
+
+### Ordinations
+
+-   Principal components analysis (PCA)
+
+-   Correspondence analysis (CA)
+
+-   Principal coordinates analysis (PCoA)
+
+-   non-Metric multidimension scaling (nMDS)
+
+-   Redundancy analysis (RDA)
+
+-   Canonical correspondence analysis (CCA)
+
