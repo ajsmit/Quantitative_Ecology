@@ -1,0 +1,87 @@
+---
+title: 'Euclidian distance'
+author:
+- affiliation: University of the Western Cape
+  name: AJ Smit
+date: '2020/08/03 (updated: `r Sys.Date()`)'
+output:
+  pdf_document:
+    fig_caption: yes
+    fig_height: 4.5
+    fig_width: 4.5
+    highlight: default
+    keep_tex: yes
+    latex_engine: xelatex
+    template: template-article_ajs.tex
+  html_document:
+    fig_caption: yes
+    fig_height: 7
+    fig_retina: 2
+    fig_width: 7
+    highlight: espresso
+    theme: cerulean
+    toc_float: yes
+  md_document:
+    variant: markdown_github
+  word_document:
+    fig_caption: yes
+    fig_height: 7
+    fig_width: 7
+    highlight: zenburn
+    toc: yes
+fontsize: 10pt
+language: Australian
+csl: /Users/ajsmit/Dropbox/R/workshops/Basic_stats/LaTeX/frontiers.csl
+papersize: A4
+tables: yes
+bibliography: bibliography.bib
+---
+
+```{r global_options, include = FALSE}
+knitr::opts_chunk$set(fig.path = 'compliled_figures/', include = TRUE, 
+                      echo = TRUE, warning = FALSE, message = FALSE, 
+                      tidy = FALSE, width.cutoff = 80, cache = FALSE, 
+                      size = "small",
+                      # results = "hide",
+                      fig.align = "center",
+                      fig.width = 4,
+                      fig.height = 2)
+```
+
+
+```{r setup}
+library(tidyverse)
+```
+
+\section{Definition}
+
+The Euclidean distance between points \textbf{p} and \textbf{q} is the length of the line segment connecting them ($\overline{\mathbf{p}\mathbf{q}}$).
+
+On an Euclidian plane, the position of point \textbf{p} is defined by the position $(p_{x},p_{y})$ and the position of point q is $(q_{x},q_{y})$. The shortest distance between the points is therefore given by the Pythagorean Theorem
+
+```{r}
+pts <- data.frame(x = c(1, 3),
+                  y = c(2, 4))
+rownames(pts) <- c("p", "q")
+
+ggplot(data = pts, aes(x = x, y = y, label = rownames(pts))) +
+  geom_point() +
+  geom_text(check_overlap = TRUE, nudge_x = -0.05, nudge_y = 0.05) +
+  geom_line(linetype = "dashed")
+```
+
+
+$$ d(\mathbf{p},\mathbf{q}) = \sqrt{(p_{x} - q_{x})^{2} + (p_{y} - q_{y})^2} $$ 
+
+```{r}
+ex.xyz <- read.csv("../data/Euclidian_dustance_demo_data_xyz.csv")
+library(vegan)
+ex.xyz.euc <- vegdist(ex.xyz[,2:4], method = "euclidian")
+```
+
+```{r}
+ex.env <- read.csv("../data/Euclidian_dustance_demo_data_env.csv")
+ex.env.euc <- vegdist(ex.env[,2:4], method = "euclidian")
+
+```
+

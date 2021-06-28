@@ -1,0 +1,8 @@
+book_filename: "Quantitative_Ecology"
+chapter_name: "Chapter "
+repo: https://github.com/ajsmit/Quantitative_Ecology
+output_dir: ../docs
+rmd_files: ["index.Rmd", "01-intro.Rmd", "02-data.Rmd", "03-explore.Rmd", "04-matrices.Rmd", "05-clusters.Rmd", "06-unconstr-ord.Rmd", "07-canon-ord.Rmd"]
+clean: [packages.bib, bookdown.bbl]
+new_session: yes
+delete_merged_file: true

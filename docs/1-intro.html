@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Quantitative Ecology" />
+<meta property="og:type" content="book" />
+
+<meta property="og:image" content="figures/NSFW.jpg" />
+<meta property="og:description" content="This is a book about quatitative ecology: theory and practice." />
+<meta name="github-repo" content="ajsmit/quantitative_ecology" />
+
+<meta name="author" content="AJ Smit" />
+
+<meta name="date" content="2018-01-22" />
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="This is a book about quatitative ecology: theory and practice.">
+
+<title>Quantitative Ecology</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+
+
+</head>
+
+<body>
+
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#prerequisites">Prerequisites</a></li>
+<li><a href="about-this-document.html#about-this-document">About this document</a></li>
+<li class="has-sub"><a href="preliminaries.html#preliminaries">Preliminaries</a><ul>
+<li><a href="venue-date-and-time.html#venue-date-and-time">Venue, date and time</a></li>
+<li><a href="course-outline.html#course-outline">Course outline</a></li>
+<li><a href="about-this-workshop.html#about-this-workshop">About this Workshop</a></li>
+<li class="has-sub"><a href="this-is-biology-why-more-r-coding.html#this-is-biology-why-more-r-coding">This is biology: why more R coding?</a><ul>
+<li><a href="this-is-biology-why-more-r-coding.html#some-negatives-of-using-vegan">Some negatives of using <code>vegan</code></a></li>
+<li><a href="this-is-biology-why-more-r-coding.html#the-challenge-learning-to-program-in-r-and-vegan">The challenge: learning to program in R and vegan</a></li>
+<li><a href="this-is-biology-why-more-r-coding.html#installing-r-and-rstudio">Installing R and RStudio</a></li>
+</ul></li>
+<li class="has-sub"><a href="resources.html#resources">Resources</a><ul>
+<li><a href="resources.html#required-reading">Required reading</a></li>
+<li><a href="resources.html#resources-about-multivatiate-ecological-methods">Resources about multivatiate ecological methods</a></li>
+<li><a href="resources.html#general-resources-about-r">General resources about R</a></li>
+</ul></li>
+<li><a href="style-and-code-conventions.html#style-and-code-conventions">Style and code conventions</a></li>
+</ul></li>
+<li class="has-sub"><a href="1-intro.html#intro"><span class="toc-section-number">1</span> Introduction</a><ul>
+<li><a href="1-1-modern-ecological-problems.html#modern-ecological-problems"><span class="toc-section-number">1.1</span> Modern ecological problems</a></li>
+<li class="has-sub"><a href="1-2-where-do-ecological-data-come-from.html#where-do-ecological-data-come-from"><span class="toc-section-number">1.2</span> Where do ecological data come from?</a><ul>
+<li><a href="1-2-where-do-ecological-data-come-from.html#field-sampling"><span class="toc-section-number">1.2.1</span> Field sampling</a></li>
+<li><a href="1-2-where-do-ecological-data-come-from.html#historical-data"><span class="toc-section-number">1.2.2</span> Historical data</a></li>
+<li><a href="1-2-where-do-ecological-data-come-from.html#remorely-sensed-data"><span class="toc-section-number">1.2.3</span> Remorely sensed data</a></li>
+<li><a href="1-2-where-do-ecological-data-come-from.html#modelled-data-projections"><span class="toc-section-number">1.2.4</span> Modelled data (projections)</a></li>
+</ul></li>
+<li class="has-sub"><a href="1-3-what-do-we-do-with-these-data.html#what-do-we-do-with-these-data"><span class="toc-section-number">1.3</span> What do we do with these data?</a><ul>
+<li><a href="1-3-what-do-we-do-with-these-data.html#initial-data-entry"><span class="toc-section-number">1.3.1</span> Initial data entry</a></li>
+<li><a href="1-3-what-do-we-do-with-these-data.html#data-management"><span class="toc-section-number">1.3.2</span> Data management</a></li>
+<li><a href="1-3-what-do-we-do-with-these-data.html#meta-data"><span class="toc-section-number">1.3.3</span> Meta-data</a></li>
+<li><a href="1-3-what-do-we-do-with-these-data.html#pre-processing-and-quality-assurance"><span class="toc-section-number">1.3.4</span> Pre-processing and quality assurance</a></li>
+<li><a href="1-3-what-do-we-do-with-these-data.html#analysis"><span class="toc-section-number">1.3.5</span> Analysis</a></li>
+<li><a href="1-3-what-do-we-do-with-these-data.html#reporting"><span class="toc-section-number">1.3.6</span> Reporting</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="2-ecological-data.html#ecological-data"><span class="toc-section-number">2</span> Ecological data</a><ul>
+<li><a href="2-1-field-sampling-1.html#field-sampling-1"><span class="toc-section-number">2.1</span> Field sampling</a></li>
+<li><a href="2-2-historical-data-1.html#historical-data-1"><span class="toc-section-number">2.2</span> Historical data</a></li>
+<li><a href="2-3-remorely-sensed-data-1.html#remorely-sensed-data-1"><span class="toc-section-number">2.3</span> Remorely sensed data</a></li>
+<li><a href="2-4-modelled-data-projections-1.html#modelled-data-projections-1"><span class="toc-section-number">2.4</span> Modelled data (projections)</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="intro" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
+<blockquote>
+<p><em>“We have become, by the power of a glorious evolutionary accident called intelligence, the stewards of life’s continuity on earth. We did not ask for this role, but we cannot abjure it. We may not be suited to it, but here we are.”</em></p>
+<p>— Stephen J. Gould</p>
+</blockquote> 
+</div>
+<p style="text-align: center;">
+<a href="style-and-code-conventions.html"><button class="btn btn-default">Previous</button></a>
+<a href="1-1-modern-ecological-problems.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+<!-- </html> -->

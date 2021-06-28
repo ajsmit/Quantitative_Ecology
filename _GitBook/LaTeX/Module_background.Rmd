@@ -1,0 +1,76 @@
+---
+title: 'BDC334: Assignment 1'
+author:
+- affiliation: University of the Western Cape
+  name: AJ Smit
+date: '2020/08/06 (updated: `r Sys.Date()`)'
+output:
+  pdf_document:
+    fig_caption: yes
+    fig_height: 4.5
+    fig_width: 4.5
+    highlight: default
+    keep_tex: yes
+    latex_engine: xelatex
+    template: template-article_ajs.tex
+  html_document:
+    fig_caption: yes
+    fig_height: 7
+    fig_retina: 2
+    fig_width: 7
+    highlight: espresso
+    theme: cerulean
+    toc_float: yes
+  md_document:
+    variant: markdown_github
+  word_document:
+    fig_caption: yes
+    fig_height: 7
+    fig_width: 7
+    highlight: zenburn
+    toc: yes
+fontsize: 10pt
+language: Australian
+csl: /Users/ajsmit/Dropbox/R/workshops/Basic_stats/LaTeX/frontiers.csl
+papersize: A4
+tables: yes
+bibliography: bibliography.bib
+---
+
+```{r global_options, include = FALSE}
+knitr::opts_chunk$set(fig.path = 'compliled_figures/', include = TRUE, 
+                      echo = TRUE, warning = FALSE, message = FALSE, 
+                      tidy = FALSE, width.cutoff = 80, cache = FALSE, 
+                      size = "small",
+                      # results = "hide",
+                      fig.align = "center",
+                      fig.width = 4,
+                      fig.height = 2)
+```
+
+\section*{Instructions}
+
+Three files are included with this assignment:
+
+\begin{enumerate}
+\item The datafile \texttt{DoubsEnv_26_30.csv}
+\item The datafile \texttt{DoubsSpe_26_30.csv} 
+\item The paper by \texttt{Koleff et al (2003)}
+\item The matrix \texttt{filename} An example distance matrix (the environmental distances calculated for the coastal sections in Smit et al. (2018)).
+\item The matrix \texttt{filename} An example dissimilarity matrix (the species dissimilarities calculated for the coastal sections in Smit et al. (2018)).
+\end{enumerate}
+
+They contain collected on the environment (environmental variables) and fish species (species data) in a river, and some textabout frequently used dissimilatity indices applied to species data.
+
+Address the following questions:
+
+\begin{description}
+\item[Question 1] Calculate pairwise distances for the environmental data, and report only the lower triangle of the resultant matrix.
+\item[Question 2] Explain the findings by describing i) the patterns seen, \emph{and} ii) the reasons for why these patterns might exist.
+\item[Question 3] Consult the paper by Koleff et al (2003). Apply Equation 1 in Table 1 to the species data, and report the lower triangle of the pairwise dissimilarity matrix.
+\item[Question 4] Explain the findings by describing i) the patterns seen, \emph{and} ii) the reasons for why these patterns might exist.
+\end{description}
+
+Provide a \textbf{neat and thoroughly annotated} MS Excel spreadsheet to which outlines the calculations, and which displays the resultant distance and dissimilarity matrices. Use separate tabs for the environmental and species data. The answers must be typed in a MS Word document. Please make sure you follow the formatting specifications \emph{precisely} as shown in the file \texttt{BDC334 Example essay format.docx}. Feel free to use the file as a template. 
+
+Failing to follow these instructions thoroughly will cause you to lose marks.

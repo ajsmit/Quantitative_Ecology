@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Quantitative Ecology</title>
+  <meta name="description" content="This is a book about quatitative ecology: theory and practice.">
+  <meta name="generator" content="bookdown 0.6 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Quantitative Ecology" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="figures/NSFW.jpg" />
+  <meta property="og:description" content="This is a book about quatitative ecology: theory and practice." />
+  <meta name="github-repo" content="ajsmit/quantitative_ecology" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Quantitative Ecology" />
+  
+  <meta name="twitter:description" content="This is a book about quatitative ecology: theory and practice." />
+  <meta name="twitter:image" content="figures/NSFW.jpg" />
+
+<meta name="author" content="AJ Smit">
+
+
+<meta name="date" content="2018-02-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="exploring-the-data.html">
+<link rel="next" href="cluster-analysis.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="prerequisites.html"><a href="prerequisites.html"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#modern-ecological-problems"><i class="fa fa-check"></i><b>1.1</b> Modern ecological problems</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#background-the-iucn-definition-of-biodiversity"><i class="fa fa-check"></i><b>1.1.1</b> Background: the IUCN definition of biodiversity</a></li>
+<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#alpha--beta--and-gamma-diversity"><i class="fa fa-check"></i><b>1.1.2</b> Alpha-, beta-, and gamma-diversity</a></li>
+<li class="chapter" data-level="1.1.3" data-path="intro.html"><a href="intro.html#whittakers-concept-of-beta-diversity-and-contemporary-interpretations"><i class="fa fa-check"></i><b>1.1.3</b> Whittaker’s concept of beta-diversity, and contemporary interpretations</a></li>
+<li class="chapter" data-level="1.1.4" data-path="intro.html"><a href="intro.html#the-relationship-between-alpha--and-beta-diversity"><i class="fa fa-check"></i><b>1.1.4</b> The relationship between alpha- and beta-diversity</a></li>
+<li class="chapter" data-level="1.1.5" data-path="intro.html"><a href="intro.html#historical-neutral-and-niche-theories"><i class="fa fa-check"></i><b>1.1.5</b> Historical, neutral, and niche theories</a></li>
+<li class="chapter" data-level="1.1.6" data-path="intro.html"><a href="intro.html#species-assembly-turnover-and-nestedness-resultant-beta-diversity"><i class="fa fa-check"></i><b>1.1.6</b> Species assembly: turnover and nestedness-resultant beta diversity</a></li>
+<li class="chapter" data-level="1.1.7" data-path="intro.html"><a href="intro.html#global-change-climate-change-etc."><i class="fa fa-check"></i><b>1.1.7</b> Global change (climate change etc.)</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#where-do-ecological-data-come-from"><i class="fa fa-check"></i><b>1.2</b> Where do ecological data come from?</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#field-sampling"><i class="fa fa-check"></i><b>1.2.1</b> Field sampling</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#historical-data"><i class="fa fa-check"></i><b>1.2.2</b> Historical data</a></li>
+<li class="chapter" data-level="1.2.3" data-path="intro.html"><a href="intro.html#remotely-sensed-data"><i class="fa fa-check"></i><b>1.2.3</b> Remotely sensed data</a></li>
+<li class="chapter" data-level="1.2.4" data-path="intro.html"><a href="intro.html#modelled-data-projections"><i class="fa fa-check"></i><b>1.2.4</b> Modelled data (projections)</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#what-do-we-do-with-these-data"><i class="fa fa-check"></i><b>1.3</b> What do we do with these data?</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="intro.html"><a href="intro.html#initial-data-entry"><i class="fa fa-check"></i><b>1.3.1</b> Initial data entry</a></li>
+<li class="chapter" data-level="1.3.2" data-path="intro.html"><a href="intro.html#meta-data-and-data-management"><i class="fa fa-check"></i><b>1.3.2</b> Meta-data and data management</a></li>
+<li class="chapter" data-level="1.3.3" data-path="intro.html"><a href="intro.html#data-wrangling-pre-processing-and-quality-assurance"><i class="fa fa-check"></i><b>1.3.3</b> Data-wrangling: pre-processing and quality assurance</a></li>
+<li class="chapter" data-level="1.3.4" data-path="intro.html"><a href="intro.html#analysis"><i class="fa fa-check"></i><b>1.3.4</b> Analysis</a></li>
+<li class="chapter" data-level="1.3.5" data-path="intro.html"><a href="intro.html#reporting"><i class="fa fa-check"></i><b>1.3.5</b> Reporting</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#this-module"><i class="fa fa-check"></i><b>1.4</b> This module</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="ecological-data.html"><a href="ecological-data.html"><i class="fa fa-check"></i><b>2</b> Ecological data</a><ul>
+<li class="chapter" data-level="2.1" data-path="ecological-data.html"><a href="ecological-data.html#properties-of-the-data-sets"><i class="fa fa-check"></i><b>2.1</b> Properties of the data sets</a></li>
+<li class="chapter" data-level="2.2" data-path="ecological-data.html"><a href="ecological-data.html#field-sampling-1"><i class="fa fa-check"></i><b>2.2</b> Field sampling</a></li>
+<li class="chapter" data-level="2.3" data-path="ecological-data.html"><a href="ecological-data.html#historical-data-1"><i class="fa fa-check"></i><b>2.3</b> Historical data</a></li>
+<li class="chapter" data-level="2.4" data-path="ecological-data.html"><a href="ecological-data.html#remotely-sensed-data-1"><i class="fa fa-check"></i><b>2.4</b> Remotely sensed data</a></li>
+<li class="chapter" data-level="2.5" data-path="ecological-data.html"><a href="ecological-data.html#modelled-data-projections-1"><i class="fa fa-check"></i><b>2.5</b> Modelled data (projections)</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploring-the-data.html"><a href="exploring-the-data.html"><i class="fa fa-check"></i><b>3</b> Exploring the data</a><ul>
+<li class="chapter" data-level="3.1" data-path="exploring-the-data.html"><a href="exploring-the-data.html#in-the-beginning"><i class="fa fa-check"></i><b>3.1</b> In the beginning</a></li>
+<li class="chapter" data-level="3.2" data-path="exploring-the-data.html"><a href="exploring-the-data.html#geographical-coordinates"><i class="fa fa-check"></i><b>3.2</b> Geographical coordinates</a></li>
+<li class="chapter" data-level="3.3" data-path="exploring-the-data.html"><a href="exploring-the-data.html#describe-the-environment"><i class="fa fa-check"></i><b>3.3</b> Describe the environment</a></li>
+<li class="chapter" data-level="3.4" data-path="exploring-the-data.html"><a href="exploring-the-data.html#describe-the-community-data"><i class="fa fa-check"></i><b>3.4</b> Describe the community data</a></li>
+<li class="chapter" data-level="3.5" data-path="exploring-the-data.html"><a href="exploring-the-data.html#data-transformations"><i class="fa fa-check"></i><b>3.5</b> Data transformations</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="pairwise-association-matrices.html"><a href="pairwise-association-matrices.html"><i class="fa fa-check"></i><b>4</b> Pairwise association matrices</a><ul>
+<li class="chapter" data-level="4.1" data-path="pairwise-association-matrices.html"><a href="pairwise-association-matrices.html#association-dissimilarity-and-similarity"><i class="fa fa-check"></i><b>4.1</b> Association (dissimilarity and similarity)</a></li>
+<li class="chapter" data-level="4.2" data-path="pairwise-association-matrices.html"><a href="pairwise-association-matrices.html#dependence-matrices"><i class="fa fa-check"></i><b>4.2</b> Dependence matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="cluster-analysis.html"><a href="cluster-analysis.html"><i class="fa fa-check"></i><b>5</b> Cluster analysis</a></li>
+<li class="chapter" data-level="6" data-path="unconstrained-ordination.html"><a href="unconstrained-ordination.html"><i class="fa fa-check"></i><b>6</b> Unconstrained ordination</a></li>
+<li class="chapter" data-level="7" data-path="canonical-ordination.html"><a href="canonical-ordination.html"><i class="fa fa-check"></i><b>7</b> Canonical ordination</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Quantitative Ecology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="pairwise-association-matrices" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Pairwise association matrices</h1>
+<p>Although we typically start our forrays into data exploration using sites × species and sites × environment tables, the formal statistical analyses usually require ‘pairwise association matrices.’ Such matrices are symmetrical (or lower triangle) square matrices (i.e. <span class="math inline">\(n \times n\)</span>). These matrices tell us about how related any sample is with any other sample in our pool of samples (i.e. relatedness amongst rows with respect to whatever populates the columns, be they species information of environmental information).</p>
+<p>Let us consider various kinds of distance matrices under the following headings.</p>
+<div id="association-dissimilarity-and-similarity" class="section level2">
+<h2><span class="header-section-number">4.1</span> Association (dissimilarity and similarity)</h2>
+<p>Two samples with similar species composition are ecologically similar, while two samples that share few species are ecologically distant. In Figure 4.1, below, the data displayed in Figure 2.1 have been converted into a dissimilarity distance matrix of dimension <span class="math inline">\(58 \times 58\)</span>. The are a few things of interest in this matrix:</p>
+<ul>
+<li><p>The distance matrix is square and therefore symmetrical. In other words, there are as many rows as there are columns, and this number corresponds to the number of samples in our sites × species matrix.</p></li>
+<li><p>The cells of the diagonal running from top-left to bottom-right contain zeros, showing rather obviously that there is no difference between a sample and the sample itself.</p></li>
+<li><p>The ‘upper triangle’ above the diagonal is an inversion of the ‘lower triangle’ below the diagonal; because they are identical in terms of the pairwise relationships that they encode, distance matrices are sometimes represented simply by the lower triangular matrix.</p></li>
+<li><p>These matrices contain ecological information. For example, between samples (here each of 58 × 50-km long coastal sections) that are geographically close together, the dissimilarity will is generally low (i.e. the samples are similar in their species composition), while the further sites are removed from each other, the greater the dissimilarity will be. (<em>Note: not all samples are not always related to each other as a function of distance — this is a characteristic of the data used for this particular example analysis, so be aware of the context when interpreting distance matrices.</em>)</p></li>
+<li><p>All information about the particular species present within each sample are now gone since that information has been collapsed to a dissimilarity measure.</p></li>
+</ul>
+</div>
+<div id="dependence-matrices" class="section level2">
+<h2><span class="header-section-number">4.2</span> Dependence matrices</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="exploring-the-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cluster-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["Quantitative_Ecology.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

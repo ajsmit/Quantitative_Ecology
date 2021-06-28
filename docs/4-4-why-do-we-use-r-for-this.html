@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Quantitative Ecology" />
+<meta property="og:type" content="book" />
+
+<meta property="og:image" content="figures/NSFW.jpg" />
+<meta property="og:description" content="This is a book about quatitative ecology: theory and practice." />
+<meta name="github-repo" content="ajsmit/quantitative_ecology" />
+
+<meta name="author" content="AJ Smit" />
+
+<meta name="date" content="2018-01-21" />
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="This is a book about quatitative ecology: theory and practice.">
+
+<title>Quantitative Ecology</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+
+<link rel="stylesheet" href="toc.css" type="text/css" />
+
+</head>
+
+<body>
+
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#prerequisites"><span class="toc-section-number">1</span> Prerequisites</a></li>
+<li><a href="2-requird-accompanying-reading.html#requird-accompanying-reading"><span class="toc-section-number">2</span> Requird accompanying reading</a></li>
+<li><a href="3-about-this-document.html#about-this-document"><span class="toc-section-number">3</span> About this document</a></li>
+<li class="has-sub"><a href="4-prelim.html#prelim"><span class="toc-section-number">4</span> Preliminaries</a><ul>
+<li><a href="4-1-venue-date-and-time.html#venue-date-and-time"><span class="toc-section-number">4.1</span> Venue, date and time</a></li>
+<li class="has-sub"><a href="4-2-course-outline.html#course-outline"><span class="toc-section-number">4.2</span> Course outline</a><ul>
+<li><a href="4-2-course-outline.html#week-1-in-the-beginning">Week 1 – In the Beginning</a></li>
+<li><a href="4-2-course-outline.html#week-2-show-and-tell">Week 2 – Show and tell</a></li>
+<li><a href="4-2-course-outline.html#week-3-going-deeper">Week 3 – Going deeper</a></li>
+<li><a href="4-2-course-outline.html#week-4-the-enlightened-researcher">Week 4 – The Enlightened Researcher</a></li>
+<li><a href="4-2-course-outline.html#week-5-the-world-is-yours">Week 5 – The world is yours</a></li>
+</ul></li>
+<li><a href="4-3-about-this-workshop.html#about-this-workshop"><span class="toc-section-number">4.3</span> About this Workshop</a></li>
+<li class="has-sub"><a href="4-4-why-do-we-use-r-for-this.html#why-do-we-use-r-for-this"><span class="toc-section-number">4.4</span> Why do we use R for this?</a><ul>
+<li><a href="4-4-why-do-we-use-r-for-this.html#some-negatives-of-using-vegan"><span class="toc-section-number">4.4.1</span> Some negatives of using <code>vegan</code></a></li>
+<li><a href="4-4-why-do-we-use-r-for-this.html#the-challenge-learning-to-program-in-r-and-vegan"><span class="toc-section-number">4.4.2</span> The challenge: learning to program in R and vegan</a></li>
+<li><a href="4-4-why-do-we-use-r-for-this.html#installing-r-and-rstudio"><span class="toc-section-number">4.4.3</span> Installing R and RStudio</a></li>
+</ul></li>
+<li><a href="4-5-resources.html#resources"><span class="toc-section-number">4.5</span> Resources</a></li>
+<li><a href="4-6-style-and-code-conventions.html#style-and-code-conventions"><span class="toc-section-number">4.6</span> Style and code conventions</a></li>
+<li><a href="4-7-about-this-document-1.html#about-this-document-1"><span class="toc-section-number">4.7</span> About this document</a></li>
+<li><a href="4-8-exercise-it-which-shall-not-be-named.html#exercise-it-which-shall-not-be-named"><span class="toc-section-number">4.8</span> Exercise: It which shall not be named</a></li>
+</ul></li>
+<li><a href="5-intro.html#intro"><span class="toc-section-number">5</span> Introduction</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="why-do-we-use-r-for-this" class="section level2">
+<h2><span class="header-section-number">4.4</span> Why do we use R for this?</h2>
+<p>Please refer to the <a href="https://robwschlegel.github.io/Intro_R_Workshop/">Intro R Workshop: Data Manipulation, Analysis and Graphing</a> for why we feel strongly that you use R <span class="citation">(R Core Team <label for="tufte-mn-2" class="margin-toggle">&#8853;</label><input type="checkbox" id="tufte-mn-2" class="margin-toggle">2017<span class="marginnote">R Core Team. 2017. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</span>)</span> for the analyses that we will perform here. All of the reasons provided there are valid here, but one reason perhaps more so than others — R and RStudio promote the principles of <em>reproducible research</em>, and in fact make it very easy to implement. We will focus on these principles throughout the workshop, and the assignments will in fact require that you submit a fully functional working script, complete with all the notes, memos, examples, data, executable code, and output that will result from completing the course material.</p>
+<p>What other oprions are there for analysing the kinds of data that we will envounter in ecological research? Software packages like the ones you may be familiar with, such as Statistica and SPSS, as well as specilised software such as Primer (<strong>P</strong>lymouth <strong>R</strong>outines <strong>I</strong>n <strong>M</strong>arine <strong>E</strong>cological <strong>R</strong>esearch; equally suited to data of terrestrial origin), are often used to perform many of the analyses we will encounter. They are rather limited with regards to the full scope of modern multivariate statistical methods in use by ecologists today. This is why we prefert to use R as the <em>engine</em> within which to do our ecological data analysis. R is used by academic statisticians the world over, as well as those academic ecological statisticians who are responsible for developing the methods used for answering ecological questions. That package is called <strong><code>vegan</code></strong> <span class="citation">(Oksanen et al. <label for="tufte-mn-3" class="margin-toggle">&#8853;</label><input type="checkbox" id="tufte-mn-3" class="margin-toggle">2017<span class="marginnote">Oksanen, Jari, F. Guillaume Blanchet, Michael Friendly, Roeland Kindt, Pierre Legendre, Dan McGlinn, Peter R. Minchin, et al. 2017. <em>Vegan: Community Ecology Package</em>. <a href="https://CRAN.R-project.org/package=vegan" class="uri">https://CRAN.R-project.org/package=vegan</a>.</span>)</span>, and it is the one we will use here.</p>
+<div id="some-negatives-of-using-vegan" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Some negatives of using <code>vegan</code></h3>
+<p>Although there are many positives of using <strong><code>vegan</code></strong>, there are some negatives:</p>
+<ol style="list-style-type: decimal">
+<li><p>It can have a steep learning curve for those whom do not like statistics or data manipulation, and it does require frequent use to remain familiar with it and to develop advanced skills</p></li>
+<li><p>Error trapping can be confusing and frustrating</p></li>
+<li><p>Rudimentary debugging, although there are some packages available to enhance the process</p></li>
+<li><p>Handles large datasets (100 MB), but can have some trouble with massive datasets (GBs)</p></li>
+<li><p>Some simple tasks can be tricky to do in R</p></li>
+<li><p>There are multiple ways of doing the same thing</p></li>
+</ol>
+</div>
+<div id="the-challenge-learning-to-program-in-r-and-vegan" class="section level3">
+<h3><span class="header-section-number">4.4.2</span> The challenge: learning to program in R and vegan</h3>
+<p>The same challenges as we highlighted in <a href="https://robwschlegel.github.io/Intro_R_Workshop/">Intro R Workshop: Data Manipulation, Analysis and Graphing</a> apply here, but we still maintain that these are far outweighed by the benefits.</p>
+</div>
+<div id="installing-r-and-rstudio" class="section level3">
+<h3><span class="header-section-number">4.4.3</span> Installing R and RStudio</h3>
+<p>We assume that you already have R installed on your computer, as all of you will have already completed the the Intro R Workshop. If you need a refresher, please refer to <a href="https://robwschlegel.github.io/Intro_R_Workshop/">Intro R Workshop: Data Manipulation, Analysis and Graphing</a> for the installation instructions.</p>
+<p>— Cheers, AJ and Robert</p>
+</div>
+</div>
+<p style="text-align: center;">
+<a href="4-3-about-this-workshop.html"><button class="btn btn-default">Previous</button></a>
+<a href="4-5-resources.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

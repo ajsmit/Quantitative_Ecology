@@ -1,0 +1,305 @@
+\documentclass[english,10pt,a4paper,oneside]{book}
+\usepackage[english]{babel}
+
+% PAGE GEOMETRY
+\usepackage{geometry}
+\geometry{margin=4cm}
+
+% FONTS
+% with lining figures for math roman; load before other text specs:
+% \usepackage{eulervm}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{microtype}
+  \usepackage{mathspec} % only with xelatex; before fontspec
+  \usepackage{fontspec} % only with xelatex
+  % \defaultfontfeatures{Ligatures=Common}
+  \setmainfont[Ligatures=TeX]{Minion Pro}
+  \setsansfont[Ligatures=TeX,Scale=MatchLowercase]{Myriad Pro}
+  \setmonofont[Scale=MatchLowercase]{Fira Code}
+  % custom ampersand
+  \newcommand{\amper}{{\fontspec[Scale=.95]{Hoefler Text}\selectfont\itshape\&}}
+\else
+  \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \DeclareUnicodeCharacter{2212}{-}
+\fi
+
+% TYPOGRAPHY SETTINGS
+% disable protrusion for tt fonts
+\UseMicrotypeSet[protrusion]{basicmath}
+% remove excessive space after full-stop
+\frenchspacing
+
+% % CHAPTER HEADINGS
+% \usepackage{sectsty} % don't work with 'quotchap'
+% \chapterfont{\usefont{T1}{qhv}{b}{n}\selectfont\huge}
+% qotation ahead of chapters and fancy chapter heading
+\usepackage{quotchap}
+\renewcommand*{\sectfont}{\sffamily\bfseries\Huge\selectfont}
+
+% SECTION, SUBSECTION, ETC. TITLES
+\usepackage[compact]{titlesec}
+% \titleformat{\chapter} % don't work with 'quotchap'
+%   {\normalfont\Huge\sffamily\bfseries}
+%   {\thechapter}
+%   {1em}
+%   {}
+\titleformat{\section}
+  {\normalfont\LARGE\sffamily\bfseries}
+  {\thesection}
+  {1em}
+  {}
+\titleformat{\subsection}
+  {\normalfont\Large\sffamily\bfseries}
+  {\thesubsection}
+  {1em}
+  {}
+\titleformat{\subsubsection}
+  {\normalfont\large\sffamily\bfseries\slshape}
+  {\thesubsubsection}
+  {1em}
+  {}
+% \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+\titlespacing*{\section}
+  {0pt}
+  {1.2ex plus 1ex minus .2ex}
+  {0.5ex plus .1ex minus .1ex}
+\titlespacing*{\subsection}
+  {0pt}
+  {1.2ex plus 1ex minus .2ex}
+  {0.5ex plus .1ex minus .1ex}
+\titlespacing*{\subsubsection}
+  {0pt}
+  {1.2ex plus 1ex minus .2ex}
+  {0.5ex plus .1ex minus .1ex}
+
+% FIGURE AND TABLE CAPTIONS
+\usepackage{floatrow}
+\floatsetup[figure]{capposition=bottom}
+\floatsetup[table]{capposition=top}
+
+% QUOTATIONS AND QUOTATION MARKS
+\usepackage[autostyle]{csquotes} % works with babel
+% use upquote if available, for straight quotes in verbatim environments
+\usepackage{upquote}{}
+
+% HYPERLINKS
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+\urlstyle{same}
+% avoid problems with \sout in headers with hyperref
+\usepackage[normalem]{ulem}
+\pdfstringdefDisableCommands{\renewcommand{\sout}{}}
+
+% FOOTNOTES
+\usepackage{fancyvrb}
+\VerbatimFootnotes % allows verbatim text in footnotes
+% Make links footnotes instead of hotlinks
+\renewcommand{\href}[2]{#2\footnote{\url{#1}}}
+% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+% BIBLIOGRAPHY
+\usepackage{natbib}
+
+% TABLES
+\usepackage{longtable,booktabs,tabularx,ragged2e,dcolumn,multirow,multicol}
+\setlength\heavyrulewidth{0.1em}
+\setlength\lightrulewidth{0.0625em}
+
+% SI UNITS
+\usepackage{siunitx}
+    \sisetup{%
+        detect-mode,
+        group-digits            = false,
+        input-symbols           = ( ) [ ] - + < > * §,
+        table-align-text-post   = false,
+        round-mode              = places,
+        round-precision         = 3
+        }
+
+% GRAPHICS SETTINGS
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+% LINESPACING
+% \usepackage{setspace}
+% \setstretch{1.5}
+
+% NO INDENTATION WITH A SPACE BETWEEN PARAGRAPHS
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+% prevent overfull lines
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% THE NEXT LINES OF CODE SPECIFY SOME YAML ENTRIES %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% switch yes/no in YAML header
+
+% ENABLES LISTING OF CODE (echo = TRUE)
+% listings: yes/no
+$if(listings)$
+\usepackage{listings}
+$endif$
+$if(lhs)$
+\lstnewenvironment{code}{\lstset{language=R,basicstyle=\small\ttfamily}}{}
+$endif$
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+% NUMBERED SECTIONS OR NOT
+% numbersections: yes/no
+$if(numbersections)$
+\setcounter{secnumdepth}{5}
+$else$
+\setcounter{secnumdepth}{0}
+$endif$
+
+% REDEFINE SUBPARAGRAPHS
+% subparagraph: yes
+$if(subparagraph)$
+$else$
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+$endif$
+
+% COMPACT TITLES
+% CREATE SUBTITLE COMMAND FOR USE IN MAKETITLE
+\usepackage{titling}
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+% YAML ENTRIES: 'title', 'subtitle', 'author' and 'date'
+\setlength{\droptitle}{-2em}
+$if(title)$
+  \title{$title$}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+$else$
+  \title{}
+  \pretitle{\vspace{\droptitle}}
+  \posttitle{}
+$endif$
+$if(subtitle)$
+\subtitle{\sf $subtitle$}
+$endif$
+$if(author)$
+  \author{$for(author)$$author$$sep$ \\ $endfor$}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+$else$
+  \author{}
+  \preauthor{}\postauthor{}
+$endif$
+$if(date)$
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{$date$}
+$else$
+  \date{}
+  \predate{}\postdate{}
+$endif$
+
+% UNCOMMENT IF FIGURE ABOVE TITLE IS NOT REQUIRED
+\pretitle{%
+  \begin{center}
+  \LARGE
+  \includegraphics[width=5cm]{figures/769_life_finds_a_way.png}\\[\bigskipamount]
+}
+\posttitle{\end{center}}
+
+% ANY HEADER/PREAMBLE LaTeX code can be added to the file
+% specified here by
+% header-includes: path/to/the/file.tex
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+\begin{document}
+$if(title)$
+\maketitle
+$endif$
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+
+$for(include-before)$
+$include-before$
+$endfor$
+
+% TABLE OF CONTENT
+% toc: yes/no
+$if(toc)$
+{
+$if(colorlinks)$
+\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
+$endif$
+\setcounter{tocdepth}{$toc-depth$}
+\tableofcontents
+}
+$endif$
+
+% LIST OF TABLES
+$if(lot)$
+\listoftables
+$endif$
+
+% LIST OF FIGURES
+$if(lof)$
+\listoffigures
+$endif$
+
+$body$
+
+$if(natbib)$
+$if(bibliography)$
+$if(biblio-title)$
+$if(book-class)$
+\renewcommand\bibname{$biblio-title$}
+$else$
+\renewcommand\refname{$biblio-title$}
+$endif$
+$endif$
+\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+$endif$
+$endif$
+
+$for(include-after)$
+$include-after$
+
+$endfor$
+
+\end{document}

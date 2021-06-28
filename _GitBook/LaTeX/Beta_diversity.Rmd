@@ -1,0 +1,63 @@
+---
+title: 'Beta-diversity'
+author:
+- affiliation: University of the Western Cape
+  name: AJ Smit
+date: '2020/07/22 (updated: `r Sys.Date()`)'
+output:
+  pdf_document:
+    fig_caption: yes
+    fig_height: 4.5
+    fig_width: 4.5
+    highlight: default
+    keep_tex: yes
+    latex_engine: xelatex
+    template: template-article_ajs.tex
+  html_document:
+    fig_caption: yes
+    fig_height: 7
+    fig_retina: 2
+    fig_width: 7
+    highlight: espresso
+    theme: cerulean
+    toc_float: yes
+  md_document:
+    variant: markdown_github
+  word_document:
+    fig_caption: yes
+    fig_height: 7
+    fig_width: 7
+    highlight: zenburn
+    toc: yes
+fontsize: 10pt
+language: Australian
+csl: /Users/ajsmit/Dropbox/R/workshops/Basic_stats/LaTeX/frontiers.csl
+papersize: A4
+tables: yes
+bibliography: bibliography.bib
+---
+
+```{r global_options, include = FALSE}
+knitr::opts_chunk$set(fig.path = 'compliled_figures/', include = TRUE, 
+                      echo = TRUE, warning = FALSE, message = FALSE, 
+                      tidy = FALSE, width.cutoff = 80, cache = FALSE, 
+                      size = "small",
+                      # results = "hide",
+                      fig.align = "center",
+                      fig.width = 4,
+                      fig.height = 2)
+```
+
+\section{Beta-diversity}
+
+β-diversity is a concept that describes how species assemblages (communities) measured within the ecosystem of interest vary from place to place, e.g. between the various transects or quadrats used to sample the ecosystem. β-diversity results from habitat heterogeneity (along gradients, or randomly).  We have already seen two concepts of β-diversity, viz. true β-diversity and absolute species turnover -- both of these rely on knowledge of species richness at local (a measure of \textalpha-diversity) and regional (\textgamma-diversity) scales. Much more insight into species assembly processes can be extracted, however, when we view \textbeta-diversity as a dissmilarity index. In this view, we will see that there are two processes by which β-diversity might be affected (i.e. in which the patterning of communities over landscapes might arise):
+
+\begin{description}
+\item[Process 1] If a region is comprised of the species A, B, C, …, M (i.e. γ-diversity is 13), a subset of the regional flora as captured by one quadrat might be species \underline{\textbf{A}}, \underline{\textbf{D}}, E, whereas in another quadrat it might be species \underline{\textbf{A}}, \underline{\textbf{D}}, F. In this instance, the α-diversity is 3 in both instances, and heterogeneity (and hence β-diversity) results from the fact that the first quadrat has species E but the other has species F. In other words, here we have the same number of species in both quadrats, but only two of the species are the same. The process responsible for this form of β-diversity is species ‘turnover’ ($\beta_\text{sim}$). Turnover refers to processes that cause communities to differ due to species being lost and/or gained from section to section, i.e. the species composition changes between sections without corresponding changes in α-diversity.
+
+\item[Process 2] Consider again species A, B, C, …, M. Now we have the first quadrat with species \underline{\textbf{A}}, \underline{\textbf{B}}, C, D, \underline{\textbf{G}}, H (α-diversity is 6) and the second quadrat has a subset of this, e.g. only species \underline{\textbf{A}}, \underline{\textbf{B}}, \underline{\textbf{G}} (α-diversity 3). Here, β-diversity comes from the fact that even if the two places share the same species, the number of species can still differ amongst the quadrats (i.e. from place to place) due to one quadrat capturing only a subset of species present in the other. This form of \textbeta-diversity is called ‘nestedness-resultant’ \textbeta-diversity ($\beta_\text{sne}$), and it refers to  processes that cause species to be gained or lost, and the community with the lowest α-diversity is a subset of the richer community.
+\end{description}
+
+The above two examples show that β-diversity is coupled not only with the identity of the species in the quadrats, but also α-diversity -- with species richness in particular.
+
+We express β-diversity as ‘nestedness-resultant’ (β\textsubscript{sne}) and ‘turnover’ (β\textsubscript{sim}) components so as to be able to distinguish between these two processes. It allows us to make inferences about the two possible drivers of β-diversity. Turnover refers to processes that cause communities to differ due to species being lost and/or gained from section to section, i.e. the species composition changes between sections without corresponding changes in α-diversity. The nestedness-resultant component implies processes that cause species to be gained or lost, and the community with the lowest α-diversity is a subset of the richer community.

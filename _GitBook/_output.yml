@@ -1,0 +1,17 @@
+bookdown::gitbook:
+  css: style.css
+  split_by: chapter
+  config:
+    toc:
+      collapse: section
+      scroll_highlight: yes
+      sharing:
+        facebook: no
+        twitter: no
+        google: yes
+bookdown::pdf_book:
+  keep_tex: yes
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib

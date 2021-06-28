@@ -1,0 +1,35 @@
+% HEADERS AND FOOTERS
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% \renewcommand{\footrule}{\hrule height 0.8pt \vspace{2mm}}
+\fancyhead[L]{R for Data Analysis}
+\fancyhead[R]{\includegraphics[width=1cm]{figures/Rlogo.png}}
+\fancyfoot[L]{Rhodes}
+\fancyfoot[C]{4 September -- 8 September 2017}
+\fancyfoot[R]{\thepage}
+
+% CODE FONT
+\usepackage{xcolor}
+\definecolor{ttcolor}{RGB}{255,110,120} % salmon
+% redefine \texttt
+\let\Oldtexttt\texttt
+\renewcommand\texttt[1]{{\ttfamily\color{ttcolor}#1}}
+
+% BOXES
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+\newtcolorbox{mybox}[3][]
+{
+  fonttitle = \bfseries\itshape\small,
+  fontupper = \small,
+  halign    = flush left,
+  colframe  = gray!15,
+  colback   = gray!5!white,
+  coltitle  = black!5!black,
+  boxrule   = 1.5pt,
+  before    = {\vspace{0.20cm}},
+  title     = #3,
+  arc       = 0mm,
+  #1,
+  breakable,
+}

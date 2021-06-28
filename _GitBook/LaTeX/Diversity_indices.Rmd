@@ -1,0 +1,37 @@
+---
+title: "Diversity indices"
+author: "AJ Smit"
+date: "8/2/2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Environmental data
+
+## Euclidian distance
+
+- where $x_{ij}$ $x_{ik}$ refer to the quantity in (column) $i$, at sites (rows) $j$ and $k$
+- $d_{jk} = \sqrt{\sum(x_{ij} - x_{ik})^2}$
+
+## Euclidian distance
+
+- Euclidian distance is “*the ‘ordinary’ straight-line distance between two points in Euclidean space*” calculated using the **Pythagorean theorem**
+- conforms to our physical concept of distance
+- in 2D and 3D, gives distance in cartesian units between points on a plane (*x*, *y*) or in a volume (*x*, *y*, *z*)
+    - e.g. short geographic distances between points on a map
+    - (loses accuracy over large distances, as Earth’s surface is not on a plane but on a sphere… correct by using great circle distances, e.g. use the Haversine formula)
+
+# Species data
+
+## Bray-Curtis
+
+- again, where $x_{ij}$ $x_{ik}$ refer to the quantity in (column) $i$, at sites (rows) $j$ and $k$
+- $d_{jk} = \frac{\sum(|x_{ij} - x_{ik}|)}{\sum(x_{ij} + x_{ik})}$
+
+## Jaccard and Bray-Curtis
+
+- use Bray-Curtis for the case where data are abundances
+- use Jaccard (with `binary = TRUE`) for presence/absence data
