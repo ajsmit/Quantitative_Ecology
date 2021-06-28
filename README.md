@@ -14,12 +14,20 @@ Biodiversity: patterns and processes...
 
 # Content
 
-## Biodiversity
+[Ecological data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/ecological_data.ipynb) -- incomplete
 
-[Biodiversity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Beta-diversity.ipynb)
+[Data properties](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/data_properties.ipynb) -- incomplete
 
-## Historical, neutral, and niche theories
+[What do we do with the data?](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/doing_data.ipynb) -- incomplete
 
-## Where do ecological data come from?
+[Exploring the data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/exploring_data.ipynb) -- incomplete
+
+[Biodiversity](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Beta-diversity.ipynb)
+
+## To follow:
+
+-   Historical, neutral, and niche theories
+
+-   Where do ecological data come from?
 
 ## What do we do with these data?
