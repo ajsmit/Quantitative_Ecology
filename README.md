@@ -42,6 +42,8 @@ Biodiversity: patterns and processes...
 
 -   Dissimilarity matrices: species
 
+-   [Deep dive into gradients](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/deep_dive_into_gradients.ipynb)
+
 -   Correlations and associations
 
 ## Ordinations
