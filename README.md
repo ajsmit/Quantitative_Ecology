@@ -38,7 +38,7 @@ Biodiversity: patterns and processes...
 
 ## Matrices
 
--   [Ecological distance](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/ecological_distance.ipynb)
+-   [Environmental distance](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/environmental_distance.ipynb)
 
 -   Dissimilarity matrices: species
 
