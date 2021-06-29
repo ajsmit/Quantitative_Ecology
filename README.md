@@ -16,13 +16,13 @@ Biodiversity: patterns and processes...
 
 ## Introduction
 
--   [Ecological data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/ecological_data.ipynb) -- incomplete
+-   [01 Ecological data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/01-ecological_data.ipynb) -- incomplete
 
--   [Data properties](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/data_properties.ipynb) -- incomplete
+-   [02 Data properties](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/02-data_properties.ipynb) -- incomplete
 
--   [What do we do with the data?](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/doing_data.ipynb) -- incomplete
+-   [03 What do we do with the data?](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/03-doing_data.ipynb) -- incomplete
 
--   [Exploring the data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/exploring_data.ipynb) -- incomplete
+-   [04 Exploring the data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/04-exploring_data.ipynb) -- incomplete
 
 -   Where do ecological data come from?
 
@@ -30,19 +30,19 @@ Biodiversity: patterns and processes...
 
 ## Biodiversity
 
--   [Biodiversity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/beta_diversity.ipynb)
+-   [05 Biodiversity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/05-beta_diversity.ipynb)
 
--   What structures biodiversity: patterns in space (and time)?
+-   06 What structures biodiversity: patterns in space (and time)?
 
--   Historical, neutral, and niche theories
+-   07 Historical, neutral, and niche theories
 
 ## Matrices
 
--   [Environmental distance](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/environmental_distance.ipynb)
+-   [08 Environmental distance](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/08-environmental_distance.ipynb)
 
--   Dissimilarity matrices: species
+-   09 Dissimilarity matrices: species
 
--   [Deep dive into gradients](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/deep_dive_into_gradients.ipynb)
+-   [10 Deep dive into gradients](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/10-deep_dive_into_gradients.ipynb)
 
 -   Correlations and associations
 
