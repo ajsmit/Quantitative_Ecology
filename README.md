@@ -24,9 +24,9 @@ Biodiversity: patterns and processes...
 
 -   [04 Exploring the data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/04-exploring_data.ipynb) -- incomplete
 
--   Where do ecological data come from?
+-   00 Where do ecological data come from?
 
--   What do we do with these data?
+-   00 What do we do with these data?
 
 ## Biodiversity
 
@@ -44,18 +44,18 @@ Biodiversity: patterns and processes...
 
 -   [10 Deep dive into gradients](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/10-deep_dive_into_gradients.ipynb)
 
--   Correlations and associations
+-   11 Correlations and associations
 
 ## Ordinations
 
--   Principal components analysis (PCA)
+-   12 Principal components analysis (PCA)
 
--   Correspondence analysis (CA)
+-   13 Correspondence analysis (CA)
 
--   Principal coordinates analysis (PCoA)
+-   14 Principal coordinates analysis (PCoA)
 
--   non-Metric multidimension scaling (nMDS)
+-   15 non-Metric multidimension scaling (nMDS)
 
--   Redundancy analysis (RDA)
+-   16 Redundancy analysis (RDA)
 
--   Canonical correspondence analysis (CCA)
+-   17 Canonical correspondence analysis (CCA)
