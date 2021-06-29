@@ -30,7 +30,7 @@ Biodiversity: patterns and processes...
 
 ## Biodiversity
 
--   [Biodiversity](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Beta-diversity.ipynb)
+-   [Biodiversity](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/beta_diversity.ipynb)
 
 -   What structures biodiversity: patterns in space (and time)?
 
@@ -38,7 +38,7 @@ Biodiversity: patterns and processes...
 
 ## Matrices
 
--   Distance matrices: environmental variables
+-   [Ecological distance](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/ecological_distance.ipynb)
 
 -   Dissimilarity matrices: species
 

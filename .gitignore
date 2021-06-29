@@ -2,7 +2,8 @@
 .Rhistory
 .Rapp.history
 .DS_Store
-/.DS_Store
+_GitBook/.DS_Store
+.DS_Store
 
 # Session Data files
 .RData
