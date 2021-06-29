@@ -1,6 +1,8 @@
 # History files
 .Rhistory
 .Rapp.history
+.DS_Store
+/.DS_Store
 
 # Session Data files
 .RData
@@ -19,6 +21,7 @@
 
 # RStudio files
 .Rproj.user/
+Quantitative_Ecology.Rproj
 
 # produced vignettes
 vignettes/*.html
@@ -37,3 +40,6 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Misc
+private/
