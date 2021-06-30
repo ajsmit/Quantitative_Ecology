@@ -30,7 +30,7 @@ Biodiversity: patterns and processes...
 
 ## Biodiversity
 
--   [05 Biodiversity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/05-beta_diversity.ipynb)
+-   [05 Biodiversity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/05-biodiversity.ipynb)
 
 -   06 What structures biodiversity: patterns in space (and time)?
 
@@ -40,7 +40,7 @@ Biodiversity: patterns and processes...
 
 -   [08 Environmental distance](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/08-environmental_distance.ipynb)
 
--   09 Dissimilarity matrices: species
+-   [09 Species dissimilarity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/09-species_dissimilarity.ipynb)
 
 -   [10 Deep dive into gradients](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/10-deep_dive_into_gradients.ipynb)
 
