@@ -8,10 +8,8 @@
 
 # Week 2
 
-## Day 1: Topic 3 -- Structuring Biodiversity
+## Day 1: Topic 3 -- Structuring Biodiversity and Review 'private/biodiversity_measures.R'
 
-### Review 'private/biodiversity_measures.R'
-
-## Day 2: Topic 4 -- Environmental Distance
+## Day 2: Topic 4 -- Environmental Distance; Review
 
 ## Day 3: Topic 5 -- Species Dissimiarity
