@@ -45,3 +45,5 @@ vignettes/*.pdf
 
 # Misc
 private/
+_GitBook/
+exercises/
