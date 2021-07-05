@@ -45,7 +45,7 @@ These materials are incomplete...
 
 -   **[Lecture 5]** Topic 4: [08 Environmental distance](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/08-environmental_distance.ipynb)
 -   **[Lecture 6]** Topic 5: [09 Species dissimilarity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/09-species_dissimilarity.ipynb)
--   **[Self study]** Topic 3: [10 Deep dive into gradients](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/10-deep_dive_into_gradients.ipynb)
+-   **[Self study]** Topic 3 revisited: [10 Deep dive into gradients](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/10-deep_dive_into_gradients.ipynb)
 
 ## Week 3
 
