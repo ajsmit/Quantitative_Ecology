@@ -21,7 +21,9 @@ These links point to online resources such as datasets and R scripts in support 
 
 ### Introduction
 
--   **Lecture 1** These materials are incomplete...
+These materials are incomplete...
+
+-   **[Lecture 1]** Topic 1: 00 Introduction
 
     -   [01 Ecological data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/01-ecological_data.ipynb)
 
@@ -31,44 +33,40 @@ These links point to online resources such as datasets and R scripts in support 
 
     -   [04 Exploring the data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/04-exploring_data.ipynb)
 
-    -   00 Where do ecological data come from?
-
-    -   00 What do we do with these data?
-
 ### Biodiversity
 
--   **Lecture 2** [Topic 2: 05 Biodiversity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/05-biodiversity.ipynb)
--   **Lecture 3** Topic 2: 05 Biodiversity (continue)
+-   **[Lecture 2]** Topic 2: [05 Biodiversity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/05-biodiversity.ipynb)
+-   **[Lecture 3]** Topic 2: 05 Biodiversity (continue)
 
 ## Week 2
 
--   **Lecture 4** Topic 2: 05 Biodiversity (continue)
--   **Self study** Topic 3: 06 What structures biodiversity?
--   **Self study** Topic 3: 07 Historical, neutral, and niche theories
+-   **[Lecture 4]** Topic 2: 05 Biodiversity (continue)
+-   **[Self study]** Topic 3: 06 What structures biodiversity?
+-   **[Self study]** Topic 3: 07 Historical, neutral, and niche theories
 
 ### Matrices
 
--   **Lecture 5** [Topic 4: 08 Environmental distance](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/08-environmental_distance.ipynb)
--   **Lecture 6** [Topic 5: 09 Species dissimilarity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/09-species_dissimilarity.ipynb)
--   **Self study** [Topic 3: 10 Deep dive into gradients](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/10-deep_dive_into_gradients.ipynb)
+-   **[Lecture 5]** Topic 4: [08 Environmental distance](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/08-environmental_distance.ipynb)
+-   **[Lecture 6]** Topic 5: [09 Species dissimilarity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/09-species_dissimilarity.ipynb)
+-   **[Self study]** Topic 3: [10 Deep dive into gradients](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/10-deep_dive_into_gradients.ipynb)
 
 ## Week 3
 
--   **Self study** [Topic 6: 11 Correlations and associations](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/11-correlations_and_associations.ipynb) (lecture 7 slot unused)
+-   **[Self study]** Topic 6: [11 Correlations and associations](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/11-correlations_and_associations.ipynb) (lecture 7 slot unused)
 
 ### Ordinations
 
--   **Lecture 8** Topic 7: 12 Introduction to ordination (theory only; refer to PDF slides and lecture video)
--   **Lecture 9** [Topic 8: 13 Principal components analysis (PCA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/12-PCA.ipynb)
+-   **[Lecture 8]** Topic 7: 12 Introduction to ordination (theory only; refer to PDF slides and lecture video)
+-   **[Lecture 9]** Topic 8: [13 Principal components analysis (PCA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/12-PCA.ipynb)
 
 ## Week 4
 
--   **Lecture 10** Topic 8: 13 Principal components analysis (PCA) (continue)
--   **Lecture 11** Topic 9: 14 Correspondence analysis (CA)
--   **Lecture 12** Topic 10: 15 Principal coordinates analysis (PCoA)
+-   **[Lecture 10]** Topic 8: 13 Principal components analysis (PCA) (continue)
+-   **[Lecture 11]** Topic 9: 14 Correspondence analysis (CA)
+-   **[Lecture 12]** Topic 10: 15 Principal coordinates analysis (PCoA)
 
 ## Week 5
 
--   **Lecture 13** Topic 11: 16 non-Metric multi-dimensional scaling (nMDS)
--   **Lecture 14** Topic 12: 17 Redundancy analysis (RDA)
--   **Lecture 15** Topic 13: 18 Canonical correspondence analysis (CCA)
+-   **[Lecture 13]** Topic 11: 16 non-Metric multi-dimensional scaling (nMDS)
+-   **[Lecture 14]** Topic 12: 17 Redundancy analysis (RDA)
+-   **[Lecture 15]** Topic 13: 18 Canonical correspondence analysis (CCA)
