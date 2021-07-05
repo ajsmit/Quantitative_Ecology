@@ -35,11 +35,11 @@ These links point to online resources such as datasets and R scripts in support 
 ### Biodiversity
 
 -   **Lecture 2** [Topic 2: 05 Biodiversity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/05-biodiversity.ipynb)
--   **Lecture 3** Topic 2: 05 Biodiversity -- Continue
+-   **Lecture 3** Topic 2: 05 Biodiversity (continue)
 
 ## Week 2
 
--   **Lecture 4** Topic 2: 05 Biodiversity -- Continue
+-   **Lecture 4** Topic 2: 05 Biodiversity (continue)
 -   **Self study** Topic 3: 06 What structures biodiversity?
 -   **Self study** Topic 3: 07 Historical, neutral, and niche theories
 
@@ -55,12 +55,12 @@ These links point to online resources such as datasets and R scripts in support 
 
 ### Ordinations
 
--   **Lecture 8** Topic 7: 12 Introduction to ordination
+-   **Lecture 8** Topic 7: 12 Introduction to ordination (theory only; refer to PDF slides and lecture video)
 -   **Lecture 9** [Topic 8: 13 Principal components analysis (PCA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/12-PCA.ipynb)
 
 ## Week 4
 
--   **Lecture 10** Topic 8: 13 Principal components analysis (PCA) -- Continue
+-   **Lecture 10** Topic 8: 13 Principal components analysis (PCA) (continue)
 -   **Lecture 11** Topic 9: 14 Correspondence analysis (CA)
 -   **Lecture 12** Topic 10: 15 Principal coordinates analysis (PCoA)
 
