@@ -1,4 +1,7 @@
-# Introduction
+---
+title: Quantitative Ecology
+layout: page
+---
 
 > *"We have become, by the power of a glorious evolutionary accident called intelligence, the stewards of life's continuity on earth. We did not ask for this role, but we cannot abjure it. We may not be suited to it, but here we are."*
 >
@@ -12,48 +15,45 @@ Community ecologists tend to analyse how multiple environmental factors act as d
 
 # Content
 
-## Introduction
+## Week 1
 
--   [01 Ecological data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/01-ecological_data.ipynb) -- incomplete
+### Introduction
 
--   [02 Data properties](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/02-data_properties.ipynb) -- incomplete
+-   *Lecture 1* [01 Ecological data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/01-ecological_data.ipynb) -- incomplete - [02 Data properties](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/02-data_properties.ipynb) -- incomplete - [03 What do we do with the data?](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/03-doing_data.ipynb) -- incomplete - [04 Exploring the data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/04-exploring_data.ipynb) -- incomplete - 00 Where do ecological data come from? - 00 What do we do with these data?
 
--   [03 What do we do with the data?](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/03-doing_data.ipynb) -- incomplete
+### Biodiversity
 
--   [04 Exploring the data](https://nbviewer.jupyter.org/github/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/04-exploring_data.ipynb) -- incomplete
+-   *Lecture 2* [05 Biodiversity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/05-biodiversity.ipynb)
+-   *Lecture 3* 05 Biodiversity -- Continue
 
--   00 Where do ecological data come from?
+## Week 2
 
--   00 What do we do with these data?
+-   *Lecture 4* 05 Biodiversity -- Continue
+-   *Self study* 06 What structures biodiversity?
+-   *Self study* 07 Historical, neutral, and niche theories
 
-## Biodiversity
+### Matrices
 
--   [05 Biodiversity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/05-biodiversity.ipynb)
+-   *Lecture 5* [08 Environmental distance](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/08-environmental_distance.ipynb)
+-   *Lecture 6* [09 Species dissimilarity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/09-species_dissimilarity.ipynb)
+-   *Self study* [10 Deep dive into gradients](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/10-deep_dive_into_gradients.ipynb)
 
--   06 What structures biodiversity: patterns in space (and time)?
+## Week 3
 
--   07 Historical, neutral, and niche theories
+-   *Lecture 7* 11 Correlations and associations
 
-## Matrices
+### Ordinations
 
--   [08 Environmental distance](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/08-environmental_distance.ipynb)
+-   *Lecture 8* 12 Principal components analysis (PCA)
+-   *Lecture 9* 12 Principal components analysis (PCA) -- Continue
 
--   [09 Species dissimilarity](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/09-species_dissimilarity.ipynb)
+## Week 4
 
--   [10 Deep dive into gradients](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/10-deep_dive_into_gradients.ipynb)
+-   *Lecture 10* 13 Correspondence analysis (CA)
+-   *Lecture 11* 14 Principal coordinates analysis (PCoA)
+-   *Lecture 12* 15 non-Metric multi-dimensional scaling (nMDS)
 
--   11 Correlations and associations
+## Week 5
 
-## Ordinations
-
--   12 Principal components analysis (PCA)
-
--   13 Correspondence analysis (CA)
-
--   14 Principal coordinates analysis (PCoA)
-
--   15 non-Metric multidimension scaling (nMDS)
-
--   16 Redundancy analysis (RDA)
-
--   17 Canonical correspondence analysis (CCA)
+-   *Lecture 13* 16 Redundancy analysis (RDA)
+-   *Lecture 14* 17 Canonical correspondence analysis (CCA)
