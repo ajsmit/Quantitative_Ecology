@@ -45,16 +45,16 @@ Community ecologists tend to analyse how multiple environmental factors act as d
 ### Ordinations
 
 -   **Lecture 8** Topic 7: 12 Introduction to ordination
--   **Lecture 8** Topic 8: 13 Principal components analysis (PCA)
--   **Lecture 9** Topic 8: 13 Principal components analysis (PCA) -- Continue
+-   **Lecture 9** Topic 8: 13 Principal components analysis (PCA)
 
 ## Week 4
 
--   **Lecture 10** Topic 9: 14 Correspondence analysis (CA)
--   **Lecture 11** Topic 10: 15 Principal coordinates analysis (PCoA)
--   **Lecture 12** Topic 11: 16 non-Metric multi-dimensional scaling (nMDS)
+-   **Lecture 10** Topic 8: 13 Principal components analysis (PCA) -- Continue
+-   **Lecture 11** Topic 9: 14 Correspondence analysis (CA)
+-   **Lecture 12** Topic 10: 15 Principal coordinates analysis (PCoA)
 
 ## Week 5
 
--   **Lecture 13** Topic 12: 17 Redundancy analysis (RDA)
--   **Lecture 14** Topic 13: 18 Canonical correspondence analysis (CCA)
+-   **Lecture 13** Topic 11: 16 non-Metric multi-dimensional scaling (nMDS)
+-   **Lecture 14** Topic 12: 17 Redundancy analysis (RDA)
+-   **Lecture 15** Topic 13: 18 Canonical correspondence analysis (CCA)
