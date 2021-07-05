@@ -54,7 +54,7 @@ These links point to online resources such as datasets and R scripts in support 
 
 ## Week 3
 
--   **Self study (Lecture 7 slot unused)** [Topic 6: 11 Correlations and associations](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/11-correlations_and_associations.ipynb)
+-   **Self study** [Topic 6: 11 Correlations and associations](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/11-correlations_and_associations.ipynb) (lecture 7 slot unused)
 
 ### Ordinations
 
