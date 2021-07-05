@@ -40,7 +40,7 @@ Community ecologists tend to analyse how multiple environmental factors act as d
 
 ## Week 3
 
--   **Lecture 7** Topic 6: 11 Correlations and associations
+-   **Lecture 7** [Topic 6: 11 Correlations and associations](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/11-correlations_and_associations.ipynb)
 
 ### Ordinations
 
