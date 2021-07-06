@@ -1,0 +1,149 @@
+---
+title: "Topic 9: Correspondence Analysis (CA)"
+author: Prof. AJ Smit
+output: html_notebook
+---
+
+# Correspondence Analysis
+
+## Set-up the analysis environment
+
+```{r}
+library(tidyverse)
+library(vegan)
+```
+
+## The Doubs River data
+
+This time we work with the species data:
+
+```{r}
+spe <- read.csv("Num_Ecol_R_book_ed1/DoubsSpe.csv")
+spe <- dplyr::select(spe, -1)
+spe
+```
+
+## Do the CA
+
+The **vegan** function `cca()` can be used for CA and Constrained Correspondence Analysis (CCA). When we do not specify constraints, as we do here, we will do a simple CA:
+
+```{r}
+spe_ca <- cca(spe)
+spe_ca
+```
+
+Okay, so there's a problem. The error message says that at least one of the rows sums to 0. Which one?
+
+```{r}
+apply(spe, 1, sum)
+```
+
+We see that the offending row is row 8, so we can omit it. This function will omit any row that sums to zero (or less):
+
+```{r}
+spe <- spe[rowSums(spe[]) > 0, ]
+spe
+```
+
+```{r}
+spe_ca <- cca(spe)
+spe_ca
+```
+
+The more verbose `summary()` output:
+
+```{r}
+summary(spe_ca)
+```
+
+The output looks similar to that of a PCA. The important things to note are the \*\*inertia\* (unconstrained and total inertia are the same), the **Eigenvalues for the unconstrained axes**, the **Species scores,** and the **Site scores**. Their interpretation is the same as before, but we can reiterate. Let us calculate the total inertia:
+
+```{r}
+sum(spe_ca$CA$eig)
+```
+
+The inertia for the first axis (CA1) is:
+
+```{r}
+spe_ca$CA$eig[1]
+```
+
+The inertia of CA1 *and* CA2 is:
+
+```{r}
+sum(spe_ca$CA$eig[1:2])
+```
+
+The fraction of the variance explained by CA1 and CA2 is:
+
+```{r}
+round(sum(spe_ca$CA$eig[1:2]) / sum(spe_ca$CA$eig) * 100, 2) # result in %
+```
+
+Above, the value is the same one as in **Cumulative Proportion** in the `summary(spe_ca)` output under the CA2 column.
+
+Species scores are *actual* species scores as they now relate to species data. The most positive and most negative eigenvectors (or loadings) indicate those species that dominate in their influence along particular CA axes. For example, CA1 will be most heavily loaded by the species Cogo and Satr (eigenvectors of 1.50075 and 1.66167, respectively). If there is an environmental gradient, it will be these species that will be most affected. At the very least, we can say that the contributions of these species are having an overriding influence on the community differences seen between sites.
+
+Site scores are also as seen earlier in PCA. The highest positive or negative loadings indicate sites that are dispersed far apart on the biplot (in ordination space). They will have large differences in fish community composition.
+
+Please see *Numerical Ecology in R* for details (pp. 133 to 140). There you will find explanations for how to interpret the ordinations and the ordination diagrams shown below.
+
+## Ordination diagrams
+
+The biplots for the above ordination are given here:
+
+```{r fig.height=2.1, fig.width=4}
+par(mfrow = c(1, 2))
+plot(spe_ca, scaling = 1, main = "CA fish abundances - biplot scaling 1")
+plot(spe_ca, scaling = 2, main = "CA fish abundances - biplot scaling 2")
+```
+
+Here are biplots with site scores, species scores for four selected species, and the species response surface showing there they are most abundant. I also include vectors for the environmental drivers and marked the ones with the greatest influence in blue.
+
+```{r fig.height=4, fig.width=4, message=FALSE, warning=FALSE}
+require('viridis')
+palette(viridis(8))
+par(mar = c(4, 4, 0.9, 0.5) + .1, mfrow = c(2, 2))
+with(spe, tmp <- ordisurf(spe_ca ~ Satr, bubble = 3,
+                          family = quasipoisson, knots = 2, col = 6,
+                          display = "sites", main = "Satr"))
+abline(h = 0, v = 0, lty = 3)
+with(spe, tmp <- ordisurf(spe_ca ~ Scer, bubble = 3,
+                          family = quasipoisson, knots = 2, col = 6,
+                          display = "sites", main = "Scer"))
+abline(h = 0, v = 0, lty = 3)
+with(spe, tmp <- ordisurf(spe_ca ~ Teso, bubble = 3,
+                          family = quasipoisson, knots = 2, col = 6,
+                          display = "sites", main = "Teso"))
+abline(h = 0, v = 0, lty = 3)
+with(spe, tmp <- ordisurf(spe_ca ~ Cogo, bubble = 3,
+                          family = quasipoisson, knots = 2, col = 6,
+                          display = "sites", main = "Cogo"))
+abline(h = 0, v = 0, lty = 3)
+
+# A posteriori projection of environmental variables in a CA
+# The last plot produced (CA scaling 2) must be active
+
+env <- read.csv("Num_Ecol_R_book_ed1/DoubsEnv.csv")
+env <- dplyr::select(env, -1)
+env <- dplyr::slice(env, -8)
+
+(spe_ca_env <- envfit(spe_ca, env, scaling = 2)) # Scaling 2 is default
+plot(spe_ca_env)
+# Plot significant variables with a different colour
+plot(spe_ca_env, p.max = 0.05, col = "red")
+```
+
+### Questions
+
+1.  How would you explain the patterns seen in the four panels of the above figure?
+
+2.  Apply approaches taken from the analysis shown immediately above to these datasets:
+
+    1.  [bird communities along elevation gradient in Yushan Mountain, Taiwan](https://www.davidzeleny.net/anadat-r/doku.php/en:data:ybirds);
+
+    2.  [alpine plant communities in Aravo, France](https://www.davidzeleny.net/anadat-r/doku.php/en:data:aravo).
+
+3.  Discuss the patterns observed, and explain the ordination diagrams with particular reference to how the species are influenced by the major environmental drivers.
+
+Submit an R script wherein you provide answers to these questions by no later than 17:00 on Friday 16 July 2021.
