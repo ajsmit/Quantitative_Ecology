@@ -57,13 +57,13 @@ These materials are incomplete...
 ### Ordinations
 
 -   **[Lecture 8]** Topic 7: 12 Introduction to ordination (theory only; refer to PDF slides and lecture video)
--   **[Lecture 9]** Topic 8: [13 Principal components analysis (PCA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/12-PCA.ipynb)
+-   **[Lecture 9]** Topic 8: [13 Principal component analysis (PCA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/12-PCA.ipynb)
 
 ## Week 4
 
--   **[Lecture 10]** Topic 8: 13 Principal components analysis (PCA) (continue)
+-   **[Lecture 10]** Topic 8: 13 Principal component analysis (PCA) (continue)
 -   **[Lecture 11]** Topic 9: [14 Correspondence analysis (CA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/13-CA.ipynb)
--   **[Lecture 12]** Topic 10: [15 Principal coordinates analysis (PCoA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/14-PCoA.ipynb)
+-   **[Lecture 12]** Topic 10: [15 Principal coordinate analysis (PCoA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/14-PCoA.ipynb)
 
 ## Week 5
 
