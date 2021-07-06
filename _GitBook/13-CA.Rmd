@@ -1,7 +1,12 @@
 ---
 title: "Topic 9: Correspondence Analysis (CA)"
 author: Prof. AJ Smit
-output: html_notebook
+output: 
+  html_notebook: 
+    highlight: tango
+    theme: cerulean
+    fig_width: 4
+    fig_height: 4
 ---
 
 # Correspondence Analysis
@@ -18,7 +23,7 @@ library(vegan)
 This time we work with the species data:
 
 ```{r}
-spe <- read.csv("Num_Ecol_R_book_ed1/DoubsSpe.csv")
+spe <- read.csv("../Num_Ecol_R_book_ed1/DoubsSpe.csv")
 spe <- dplyr::select(spe, -1)
 spe
 ```
@@ -28,8 +33,8 @@ spe
 The **vegan** function `cca()` can be used for CA and Constrained Correspondence Analysis (CCA). When we do not specify constraints, as we do here, we will do a simple CA:
 
 ```{r}
-spe_ca <- cca(spe)
-spe_ca
+# spe_ca <- cca(spe)
+# spe_ca
 ```
 
 Okay, so there's a problem. The error message says that at least one of the rows sums to 0. Which one?
@@ -124,7 +129,7 @@ abline(h = 0, v = 0, lty = 3)
 # A posteriori projection of environmental variables in a CA
 # The last plot produced (CA scaling 2) must be active
 
-env <- read.csv("Num_Ecol_R_book_ed1/DoubsEnv.csv")
+env <- read.csv("../Num_Ecol_R_book_ed1/DoubsEnv.csv")
 env <- dplyr::select(env, -1)
 env <- dplyr::slice(env, -8)
 

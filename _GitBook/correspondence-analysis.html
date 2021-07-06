@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Topic 9: Correspondence Analysis (CA)</title>
+  <meta name="description" content="Topic 9: Correspondence Analysis (CA)" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Topic 9: Correspondence Analysis (CA)" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Topic 9: Correspondence Analysis (CA)" />
+  
+  
+  
+
+<meta name="author" content="Prof. AJ Smit" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path=""><a href="#correspondence-analysis"><i class="fa fa-check"></i><b>1</b> Correspondence Analysis</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path=""><a href="#set-up-the-analysis-environment"><i class="fa fa-check"></i><b>1.1</b> Set-up the analysis environment</a></li>
+<li class="chapter" data-level="1.2" data-path=""><a href="#the-doubs-river-data"><i class="fa fa-check"></i><b>1.2</b> The Doubs River data</a></li>
+<li class="chapter" data-level="1.3" data-path=""><a href="#do-the-ca"><i class="fa fa-check"></i><b>1.3</b> Do the CA</a></li>
+<li class="chapter" data-level="1.4" data-path=""><a href="#ordination-diagrams"><i class="fa fa-check"></i><b>1.4</b> Ordination diagrams</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path=""><a href="#questions"><i class="fa fa-check"></i><b>1.4.1</b> Questions</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Topic 9: Correspondence Analysis (CA)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Topic 9: Correspondence Analysis (CA)</h1>
+<p class="author"><em>Prof. AJ Smit</em></p>
+</div>
+<div id="correspondence-analysis" class="section level1" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Correspondence Analysis</h1>
+<div id="set-up-the-analysis-environment" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Set-up the analysis environment</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.3.5     ✓ purrr   0.3.4
+## ✓ tibble  3.1.2     ✓ dplyr   1.0.7
+## ✓ tidyr   1.1.3     ✓ stringr 1.4.0
+## ✓ readr   1.4.0     ✓ forcats 0.5.1</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vegan)</span></code></pre></div>
+<pre><code>## Loading required package: permute</code></pre>
+<pre><code>## Loading required package: lattice</code></pre>
+<pre><code>## This is vegan 2.5-7</code></pre>
+</div>
+<div id="the-doubs-river-data" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> The Doubs River data</h2>
+<p>This time we work with the species data:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>spe <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../Num_Ecol_R_book_ed1/DoubsSpe.csv&quot;</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>spe <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">select</span>(spe, <span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>spe</span></code></pre></div>
+<pre><code>##    Cogo Satr Phph Babl Thth Teso Chna Pato Lele Sqce Baba Albi Gogo Eslu Pefl
+## 1     0    3    0    0    0    0    0    0    0    0    0    0    0    0    0
+## 2     0    5    4    3    0    0    0    0    0    0    0    0    0    0    0
+## 3     0    5    5    5    0    0    0    0    0    0    0    0    0    1    0
+## 4     0    4    5    5    0    0    0    0    0    1    0    0    1    2    2
+## 5     0    2    3    2    0    0    0    0    5    2    0    0    2    4    4
+## 6     0    3    4    5    0    0    0    0    1    2    0    0    1    1    1
+## 7     0    5    4    5    0    0    0    0    1    1    0    0    0    0    0
+## 8     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+## 9     0    0    1    3    0    0    0    0    0    5    0    0    0    0    0
+## 10    0    1    4    4    0    0    0    0    2    2    0    0    1    0    0
+## 11    1    3    4    1    1    0    0    0    0    1    0    0    0    0    0
+## 12    2    5    4    4    2    0    0    0    0    1    0    0    0    0    0
+## 13    2    5    5    2    3    2    0    0    0    0    0    0    0    0    0
+## 14    3    5    5    4    4    3    0    0    0    1    1    0    1    1    0
+## 15    3    4    4    5    2    4    0    0    3    3    2    0    2    0    0
+## 16    2    3    3    5    0    5    0    4    5    2    2    1    2    1    1
+## 17    1    2    4    4    1    2    1    4    3    2    3    4    1    1    2
+## 18    1    1    3    3    1    1    1    3    2    3    3    3    2    1    3
+## 19    0    0    3    5    0    1    2    3    2    1    2    2    4    1    1
+## 20    0    0    1    2    0    0    2    2    2    3    4    3    4    2    2
+## 21    0    0    1    1    0    0    2    2    2    2    4    2    5    3    3
+## 22    0    0    0    1    0    0    3    2    3    4    5    1    5    3    4
+## 23    0    0    0    0    0    0    0    0    0    1    0    0    0    0    0
+## 24    0    0    0    0    0    0    1    0    0    2    0    0    1    0    0
+## 25    0    0    0    0    0    0    0    0    1    1    0    0    2    1    0
+## 26    0    0    0    1    0    0    1    0    1    2    2    1    3    2    1
+## 27    0    0    0    1    0    0    1    1    2    3    4    1    4    4    1
+## 28    0    0    0    1    0    0    1    1    2    4    3    1    4    3    2
+## 29    0    1    1    1    1    1    2    2    3    4    5    3    5    5    4
+## 30    0    0    0    0    0    0    1    2    3    3    3    5    5    4    5
+##    Rham Legi Scer Cyca Titi Abbr Icme Gyce Ruru Blbj Alal Anan
+## 1     0    0    0    0    0    0    0    0    0    0    0    0
+## 2     0    0    0    0    0    0    0    0    0    0    0    0
+## 3     0    0    0    0    0    0    0    0    0    0    0    0
+## 4     0    0    0    0    1    0    0    0    0    0    0    0
+## 5     0    0    2    0    3    0    0    0    5    0    0    0
+## 6     0    0    0    0    2    0    0    0    1    0    0    0
+## 7     0    0    0    0    0    0    0    0    0    0    0    0
+## 8     0    0    0    0    0    0    0    0    0    0    0    0
+## 9     0    0    0    0    1    0    0    0    4    0    0    0
+## 10    0    0    0    0    0    0    0    0    0    0    0    0
+## 11    0    0    0    0    0    0    0    0    0    0    0    0
+## 12    0    0    0    0    0    0    0    0    0    0    0    0
+## 13    0    0    0    0    0    0    0    0    0    0    0    0
+## 14    0    0    0    0    0    0    0    0    0    0    0    0
+## 15    0    0    0    0    1    0    0    0    0    0    0    0
+## 16    0    1    0    1    1    0    0    0    1    0    0    0
+## 17    1    1    0    1    1    0    0    0    2    0    2    1
+## 18    2    1    0    1    1    0    0    1    2    0    2    1
+## 19    2    1    1    1    2    1    0    1    5    1    3    1
+## 20    3    2    2    1    4    1    0    2    5    2    5    2
+## 21    3    2    2    2    4    3    1    3    5    3    5    2
+## 22    3    3    2    3    4    4    2    4    5    4    5    2
+## 23    0    0    0    0    0    0    0    0    1    0    2    0
+## 24    0    1    0    0    0    0    0    2    2    1    5    0
+## 25    0    0    1    0    0    0    0    1    1    0    3    0
+## 26    2    2    1    1    3    2    1    4    4    2    5    2
+## 27    3    3    1    2    5    3    2    5    5    4    5    3
+## 28    4    4    2    4    4    3    3    5    5    5    5    4
+## 29    5    5    2    3    3    4    4    5    5    4    5    4
+## 30    5    3    5    5    5    5    5    5    5    5    5    5</code></pre>
+</div>
+<div id="do-the-ca" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Do the CA</h2>
+<p>The <strong>vegan</strong> function <code>cca()</code> can be used for CA and Constrained Correspondence Analysis (CCA). When we do not specify constraints, as we do here, we will do a simple CA:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># spe_ca &lt;- cca(spe)</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># spe_ca</span></span></code></pre></div>
+<p>Okay, so there’s a problem. The error message says that at least one of the rows sums to 0. Which one?</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(spe, <span class="dv">1</span>, sum)</span></code></pre></div>
+<pre><code>##  [1]  3 12 16 21 34 21 16  0 14 14 11 18 19 28 33 40 44 42 46 56 62 72  4 15 11
+## [26] 43 63 70 87 89</code></pre>
+<p>We see that the offending row is row 8, so we can omit it. This function will omit any row that sums to zero (or less):</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>spe <span class="ot">&lt;-</span> spe[<span class="fu">rowSums</span>(spe[]) <span class="sc">&gt;</span> <span class="dv">0</span>, ]</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>spe</span></code></pre></div>
+<pre><code>##    Cogo Satr Phph Babl Thth Teso Chna Pato Lele Sqce Baba Albi Gogo Eslu Pefl
+## 1     0    3    0    0    0    0    0    0    0    0    0    0    0    0    0
+## 2     0    5    4    3    0    0    0    0    0    0    0    0    0    0    0
+## 3     0    5    5    5    0    0    0    0    0    0    0    0    0    1    0
+## 4     0    4    5    5    0    0    0    0    0    1    0    0    1    2    2
+## 5     0    2    3    2    0    0    0    0    5    2    0    0    2    4    4
+## 6     0    3    4    5    0    0    0    0    1    2    0    0    1    1    1
+## 7     0    5    4    5    0    0    0    0    1    1    0    0    0    0    0
+## 9     0    0    1    3    0    0    0    0    0    5    0    0    0    0    0
+## 10    0    1    4    4    0    0    0    0    2    2    0    0    1    0    0
+## 11    1    3    4    1    1    0    0    0    0    1    0    0    0    0    0
+## 12    2    5    4    4    2    0    0    0    0    1    0    0    0    0    0
+## 13    2    5    5    2    3    2    0    0    0    0    0    0    0    0    0
+## 14    3    5    5    4    4    3    0    0    0    1    1    0    1    1    0
+## 15    3    4    4    5    2    4    0    0    3    3    2    0    2    0    0
+## 16    2    3    3    5    0    5    0    4    5    2    2    1    2    1    1
+## 17    1    2    4    4    1    2    1    4    3    2    3    4    1    1    2
+## 18    1    1    3    3    1    1    1    3    2    3    3    3    2    1    3
+## 19    0    0    3    5    0    1    2    3    2    1    2    2    4    1    1
+## 20    0    0    1    2    0    0    2    2    2    3    4    3    4    2    2
+## 21    0    0    1    1    0    0    2    2    2    2    4    2    5    3    3
+## 22    0    0    0    1    0    0    3    2    3    4    5    1    5    3    4
+## 23    0    0    0    0    0    0    0    0    0    1    0    0    0    0    0
+## 24    0    0    0    0    0    0    1    0    0    2    0    0    1    0    0
+## 25    0    0    0    0    0    0    0    0    1    1    0    0    2    1    0
+## 26    0    0    0    1    0    0    1    0    1    2    2    1    3    2    1
+## 27    0    0    0    1    0    0    1    1    2    3    4    1    4    4    1
+## 28    0    0    0    1    0    0    1    1    2    4    3    1    4    3    2
+## 29    0    1    1    1    1    1    2    2    3    4    5    3    5    5    4
+## 30    0    0    0    0    0    0    1    2    3    3    3    5    5    4    5
+##    Rham Legi Scer Cyca Titi Abbr Icme Gyce Ruru Blbj Alal Anan
+## 1     0    0    0    0    0    0    0    0    0    0    0    0
+## 2     0    0    0    0    0    0    0    0    0    0    0    0
+## 3     0    0    0    0    0    0    0    0    0    0    0    0
+## 4     0    0    0    0    1    0    0    0    0    0    0    0
+## 5     0    0    2    0    3    0    0    0    5    0    0    0
+## 6     0    0    0    0    2    0    0    0    1    0    0    0
+## 7     0    0    0    0    0    0    0    0    0    0    0    0
+## 9     0    0    0    0    1    0    0    0    4    0    0    0
+## 10    0    0    0    0    0    0    0    0    0    0    0    0
+## 11    0    0    0    0    0    0    0    0    0    0    0    0
+## 12    0    0    0    0    0    0    0    0    0    0    0    0
+## 13    0    0    0    0    0    0    0    0    0    0    0    0
+## 14    0    0    0    0    0    0    0    0    0    0    0    0
+## 15    0    0    0    0    1    0    0    0    0    0    0    0
+## 16    0    1    0    1    1    0    0    0    1    0    0    0
+## 17    1    1    0    1    1    0    0    0    2    0    2    1
+## 18    2    1    0    1    1    0    0    1    2    0    2    1
+## 19    2    1    1    1    2    1    0    1    5    1    3    1
+## 20    3    2    2    1    4    1    0    2    5    2    5    2
+## 21    3    2    2    2    4    3    1    3    5    3    5    2
+## 22    3    3    2    3    4    4    2    4    5    4    5    2
+## 23    0    0    0    0    0    0    0    0    1    0    2    0
+## 24    0    1    0    0    0    0    0    2    2    1    5    0
+## 25    0    0    1    0    0    0    0    1    1    0    3    0
+## 26    2    2    1    1    3    2    1    4    4    2    5    2
+## 27    3    3    1    2    5    3    2    5    5    4    5    3
+## 28    4    4    2    4    4    3    3    5    5    5    5    4
+## 29    5    5    2    3    3    4    4    5    5    4    5    4
+## 30    5    3    5    5    5    5    5    5    5    5    5    5</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>spe_ca <span class="ot">&lt;-</span> <span class="fu">cca</span>(spe)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>spe_ca</span></code></pre></div>
+<pre><code>## Call: cca(X = spe)
+## 
+##               Inertia Rank
+## Total           1.167     
+## Unconstrained   1.167   26
+## Inertia is scaled Chi-square 
+## 
+## Eigenvalues for unconstrained axes:
+##    CA1    CA2    CA3    CA4    CA5    CA6    CA7    CA8 
+## 0.6010 0.1444 0.1073 0.0834 0.0516 0.0418 0.0339 0.0288 
+## (Showing 8 of 26 unconstrained eigenvalues)</code></pre>
+<p>The more verbose <code>summary()</code> output:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(spe_ca)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## cca(X = spe) 
+## 
+## Partitioning of scaled Chi-square:
+##               Inertia Proportion
+## Total           1.167          1
+## Unconstrained   1.167          1
+## 
+## Eigenvalues, and their contribution to the scaled Chi-square 
+## 
+## Importance of components:
+##                         CA1    CA2     CA3     CA4     CA5     CA6     CA7
+## Eigenvalue            0.601 0.1444 0.10729 0.08337 0.05158 0.04185 0.03389
+## Proportion Explained  0.515 0.1237 0.09195 0.07145 0.04420 0.03586 0.02904
+## Cumulative Proportion 0.515 0.6387 0.73069 0.80214 0.84634 0.88220 0.91124
+##                           CA8     CA9     CA10     CA11     CA12     CA13
+## Eigenvalue            0.02883 0.01684 0.010826 0.010142 0.007886 0.006123
+## Proportion Explained  0.02470 0.01443 0.009278 0.008691 0.006758 0.005247
+## Cumulative Proportion 0.93594 0.95038 0.959655 0.968346 0.975104 0.980351
+##                           CA14     CA15     CA16     CA17     CA18     CA19
+## Eigenvalue            0.004867 0.004606 0.003844 0.003067 0.001823 0.001642
+## Proportion Explained  0.004171 0.003948 0.003294 0.002629 0.001562 0.001407
+## Cumulative Proportion 0.984522 0.988470 0.991764 0.994393 0.995955 0.997362
+##                           CA20      CA21      CA22      CA23      CA24
+## Eigenvalue            0.001295 0.0008775 0.0004217 0.0002149 0.0001528
+## Proportion Explained  0.001110 0.0007520 0.0003614 0.0001841 0.0001309
+## Cumulative Proportion 0.998472 0.9992238 0.9995852 0.9997693 0.9999002
+##                            CA25      CA26
+## Eigenvalue            8.949e-05 2.695e-05
+## Proportion Explained  7.669e-05 2.310e-05
+## Cumulative Proportion 1.000e+00 1.000e+00
+## 
+## Scaling 2 for species and site scores
+## * Species are scaled proportional to eigenvalues
+## * Sites are unscaled: weighted dispersion equal on all dimensions
+## 
+## 
+## Species scores
+## 
+##           CA1       CA2      CA3       CA4       CA5       CA6
+## Cogo  1.50075 -1.410293  0.26049 -0.307203  0.271777 -0.003465
+## Satr  1.66167  0.444129  0.57571  0.166073 -0.261870 -0.326590
+## Phph  1.28545  0.285328 -0.04768  0.018126  0.043847  0.200732
+## Babl  0.98662  0.360900 -0.35265 -0.009021 -0.012231  0.253429
+## Thth  1.55554 -1.389752  0.80505 -0.468471  0.471301  0.225409
+## Teso  0.99709 -1.479902 -0.48035  0.079397 -0.105715 -0.332445
+## Chna -0.54916 -0.051534  0.01123 -0.096004 -0.382763  0.134807
+## Pato -0.18478 -0.437710 -0.57438  0.424267 -0.587150  0.091866
+## Lele  0.01337 -0.095342 -0.57672  0.212017  0.126668 -0.389103
+## Sqce  0.01078  0.140577 -0.34811 -0.538268  0.185286  0.167087
+## Baba -0.33363 -0.300682 -0.04929  0.170961 -0.157203  0.103068
+## Albi -0.38357 -0.255310 -0.20136  0.374057 -0.385866  0.239001
+## Gogo -0.32152 -0.034382 -0.07423 -0.031236  0.014417 -0.156351
+## Eslu -0.26165  0.187282  0.00617  0.183771  0.295142 -0.262808
+## Pefl -0.28913  0.121044 -0.18919  0.367615  0.218087 -0.163675
+## Rham -0.60298 -0.057369  0.20341  0.214299 -0.050977  0.211926
+## Legi -0.58669 -0.082467  0.21198  0.050175 -0.120456  0.108724
+## Scer -0.61815  0.124733  0.13339  0.147190  0.317736 -0.340380
+## Cyca -0.57951 -0.110732  0.20173  0.308547  0.006854  0.153224
+## Titi -0.37880  0.138023 -0.07825  0.095793  0.256285 -0.029245
+## Abbr -0.70235  0.011155  0.40242  0.211582  0.138186  0.132297
+## Icme -0.73238 -0.009098  0.55678  0.321852  0.281812  0.172271
+## Gyce -0.69300  0.038971  0.37688 -0.183965 -0.051945 -0.011126
+## Ruru -0.44181  0.176915 -0.23691 -0.345104  0.129676 -0.043802
+## Blbj -0.70928  0.032317  0.40924  0.030224  0.049050  0.114560
+## Alal -0.63114  0.053594  0.15204 -0.661381 -0.414796 -0.206611
+## Anan -0.63578 -0.041894  0.30093  0.224044  0.030444  0.203160
+## 
+## 
+## Site scores (weighted averages of species scores)
+## 
+##         CA1       CA2        CA3      CA4      CA5      CA6
+## 1   2.76488  3.076306  5.3657489  1.99192 -5.07714 -7.80447
+## 2   2.27540  2.565531  1.2659130  0.87538 -1.89139 -0.13887
+## 3   2.01823  2.441224  0.5144079  0.79436 -1.03741  0.56015
+## 4   1.28485  1.935664 -0.2509482  0.76470  0.54752  0.10579
+## 5   0.08875  1.015182 -1.4555434  0.47672  2.69249 -2.92498
+## 6   1.03188  1.712163 -0.9544059  0.01584  0.91932  0.39856
+## 7   1.91427  2.256208 -0.0001407  0.39844 -1.07017  0.32127
+## 9   0.25591  1.443008 -2.5777721 -3.41400  2.36613  2.71741
+## 10  1.24517  1.526391 -1.9635663 -0.41230  0.69647  1.51859
+## 11  2.14501  0.110278  1.6108693 -0.82023  0.53918  1.01153
+## 12  2.17418 -0.251649  1.5845397 -0.81483  0.52623  1.05501
+## 13  2.30944 -2.034439  1.9181448 -0.60481  0.64435 -0.14844
+## 14  1.87141 -2.262503  1.1066796 -0.80840  1.09542  0.11038
+## 15  1.34659 -1.805967 -0.6441505 -0.52803  0.76871 -0.67165
+## 16  0.70214 -1.501167 -1.9735888  0.98502 -0.93585 -1.27168
+## 17  0.28775 -0.836803 -1.2259108  0.73302 -1.57036  0.57315
+## 18  0.05299 -0.647950 -0.9234228  0.35770 -0.95401  0.77738
+## 19 -0.20584 -0.007252 -1.0154343  0.07041 -1.03450  0.51442
+## 20 -0.57879  0.042849 -0.3660551 -0.15019 -0.61357  0.10115
+## 21 -0.67320  0.038875  0.1194956  0.17256 -0.14686 -0.12018
+## 22 -0.71933  0.014694  0.2204186  0.13598  0.09459 -0.02068
+## 23 -0.70438  0.735398 -0.6546250 -6.61523 -2.49441 -1.73215
+## 24 -0.83976  0.390120  0.5605295 -4.38864 -2.56916 -0.96702
+## 25 -0.68476  0.418842 -0.2860819 -2.80336 -0.37540 -3.93791
+## 26 -0.75808  0.210204  0.5894091 -0.70004 -0.01880 -0.10779
+## 27 -0.75046  0.100869  0.5531191 -0.12946  0.29164  0.11280
+## 28 -0.77878  0.088976  0.7379012  0.05204  0.40940  0.43236
+## 29 -0.60815 -0.203235  0.5522726  0.43621  0.15010  0.25618
+## 30 -0.80860 -0.019592  0.6686542  0.88136  0.52744  0.16456</code></pre>
+<p>The output looks similar to that of a PCA. The important things to note are the **inertia* (unconstrained and total inertia are the same), the <strong>Eigenvalues for the unconstrained axes</strong>, the <strong>Species scores,</strong> and the <strong>Site scores</strong>. Their interpretation is the same as before, but we can reiterate. Let us calculate the total inertia:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(spe_ca<span class="sc">$</span>CA<span class="sc">$</span>eig)</span></code></pre></div>
+<pre><code>## [1] 1.166914</code></pre>
+<p>The inertia for the first axis (CA1) is:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>spe_ca<span class="sc">$</span>CA<span class="sc">$</span>eig[<span class="dv">1</span>]</span></code></pre></div>
+<pre><code>##       CA1 
+## 0.6009926</code></pre>
+<p>The inertia of CA1 <em>and</em> CA2 is:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(spe_ca<span class="sc">$</span>CA<span class="sc">$</span>eig[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>])</span></code></pre></div>
+<pre><code>## [1] 0.7453635</code></pre>
+<p>The fraction of the variance explained by CA1 and CA2 is:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">sum</span>(spe_ca<span class="sc">$</span>CA<span class="sc">$</span>eig[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]) <span class="sc">/</span> <span class="fu">sum</span>(spe_ca<span class="sc">$</span>CA<span class="sc">$</span>eig) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">2</span>) <span class="co"># result in %</span></span></code></pre></div>
+<pre><code>## [1] 63.87</code></pre>
+<p>Above, the value is the same one as in <strong>Cumulative Proportion</strong> in the <code>summary(spe_ca)</code> output under the CA2 column.</p>
+<p>Species scores are <em>actual</em> species scores as they now relate to species data. The most positive and most negative eigenvectors (or loadings) indicate those species that dominate in their influence along particular CA axes. For example, CA1 will be most heavily loaded by the species Cogo and Satr (eigenvectors of 1.50075 and 1.66167, respectively). If there is an environmental gradient, it will be these species that will be most affected. At the very least, we can say that the contributions of these species are having an overriding influence on the community differences seen between sites.</p>
+<p>Site scores are also as seen earlier in PCA. The highest positive or negative loadings indicate sites that are dispersed far apart on the biplot (in ordination space). They will have large differences in fish community composition.</p>
+<p>Please see <em>Numerical Ecology in R</em> for details (pp. 133 to 140). There you will find explanations for how to interpret the ordinations and the ordination diagrams shown below.</p>
+</div>
+<div id="ordination-diagrams" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Ordination diagrams</h2>
+<p>The biplots for the above ordination are given here:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(spe_ca, <span class="at">scaling =</span> <span class="dv">1</span>, <span class="at">main =</span> <span class="st">&quot;CA fish abundances - biplot scaling 1&quot;</span>)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(spe_ca, <span class="at">scaling =</span> <span class="dv">2</span>, <span class="at">main =</span> <span class="st">&quot;CA fish abundances - biplot scaling 2&quot;</span>)</span></code></pre></div>
+<p><img src="13-CA_files/figure-html/unnamed-chunk-12-1.png" width="384" /></p>
+<p>Here are biplots with site scores, species scores for four selected species, and the species response surface showing there they are most abundant. I also include vectors for the environmental drivers and marked the ones with the greatest influence in blue.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(<span class="st">&#39;viridis&#39;</span>)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">palette</span>(<span class="fu">viridis</span>(<span class="dv">8</span>))</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">0.9</span>, <span class="fl">0.5</span>) <span class="sc">+</span> .<span class="dv">1</span>, <span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(spe, tmp <span class="ot">&lt;-</span> <span class="fu">ordisurf</span>(spe_ca <span class="sc">~</span> Satr, <span class="at">bubble =</span> <span class="dv">3</span>,</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>                          <span class="at">family =</span> quasipoisson, <span class="at">knots =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="dv">6</span>,</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>                          <span class="at">display =</span> <span class="st">&quot;sites&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Satr&quot;</span>))</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(spe, tmp <span class="ot">&lt;-</span> <span class="fu">ordisurf</span>(spe_ca <span class="sc">~</span> Scer, <span class="at">bubble =</span> <span class="dv">3</span>,</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>                          <span class="at">family =</span> quasipoisson, <span class="at">knots =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="dv">6</span>,</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>                          <span class="at">display =</span> <span class="st">&quot;sites&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Scer&quot;</span>))</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(spe, tmp <span class="ot">&lt;-</span> <span class="fu">ordisurf</span>(spe_ca <span class="sc">~</span> Teso, <span class="at">bubble =</span> <span class="dv">3</span>,</span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>                          <span class="at">family =</span> quasipoisson, <span class="at">knots =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="dv">6</span>,</span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>                          <span class="at">display =</span> <span class="st">&quot;sites&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Teso&quot;</span>))</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(spe, tmp <span class="ot">&lt;-</span> <span class="fu">ordisurf</span>(spe_ca <span class="sc">~</span> Cogo, <span class="at">bubble =</span> <span class="dv">3</span>,</span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>                          <span class="at">family =</span> quasipoisson, <span class="at">knots =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="dv">6</span>,</span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>                          <span class="at">display =</span> <span class="st">&quot;sites&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Cogo&quot;</span>))</span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a><span class="co"># A posteriori projection of environmental variables in a CA</span></span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a><span class="co"># The last plot produced (CA scaling 2) must be active</span></span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a>env <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../Num_Ecol_R_book_ed1/DoubsEnv.csv&quot;</span>)</span>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a>env <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">select</span>(env, <span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a>env <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">slice</span>(env, <span class="sc">-</span><span class="dv">8</span>)</span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a>(spe_ca_env <span class="ot">&lt;-</span> <span class="fu">envfit</span>(spe_ca, env, <span class="at">scaling =</span> <span class="dv">2</span>)) <span class="co"># Scaling 2 is default</span></span></code></pre></div>
+<pre><code>## 
+## ***VECTORS
+## 
+##          CA1      CA2     r2 Pr(&gt;r)    
+## dfs -0.94799 -0.31830 0.6892  0.001 ***
+## alt  0.81159  0.58423 0.8078  0.001 ***
+## slo  0.73753  0.67531 0.2976  0.006 ** 
+## flo -0.92837 -0.37166 0.4440  0.001 ***
+## pH   0.50723 -0.86181 0.0908  0.211    
+## har -0.71728 -0.69678 0.4722  0.001 ***
+## pho -0.99897  0.04533 0.1757  0.077 .  
+## nit -0.94906 -0.31511 0.4510  0.001 ***
+## amm -0.97495  0.22241 0.1762  0.076 .  
+## oxy  0.93352 -0.35854 0.6263  0.001 ***
+## bod -0.94094  0.33857 0.2237  0.034 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## Permutation: free
+## Number of permutations: 999</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(spe_ca_env)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot significant variables with a different colour</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(spe_ca_env, <span class="at">p.max =</span> <span class="fl">0.05</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="13-CA_files/figure-html/unnamed-chunk-13-1.png" width="384" /></p>
+<div id="questions" class="section level3" number="1.4.1">
+<h3><span class="header-section-number">1.4.1</span> Questions</h3>
+<ol style="list-style-type: decimal">
+<li><p>How would you explain the patterns seen in the four panels of the above figure?</p></li>
+<li><p>Apply approaches taken from the analysis shown immediately above to these datasets:</p>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://www.davidzeleny.net/anadat-r/doku.php/en:data:ybirds">bird communities along elevation gradient in Yushan Mountain, Taiwan</a>;</p></li>
+<li><p><a href="https://www.davidzeleny.net/anadat-r/doku.php/en:data:aravo">alpine plant communities in Aravo, France</a>.</p></li>
+</ol></li>
+<li><p>Discuss the patterns observed, and explain the ordination diagrams with particular reference to how the species are influenced by the major environmental drivers.</p></li>
+</ol>
+<p>Submit an R script wherein you provide answers to these questions by no later than 17:00 on Friday 16 July 2021.</p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true,
+"sharing": {
+"facebook": false,
+"twitter": false,
+"google": true
+}
+},
+"search": false
+});
+});
+</script>
+
+</body>
+
+</html>
