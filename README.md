@@ -64,6 +64,6 @@ These materials are incomplete...
 
 ## Week 5
 
--   **[Lecture 13]** Topic 11: 16 non-Metric multi-dimensional scaling (nMDS)
+-   **[Lecture 13]** Topic 11: [16 non-Metric multi-dimensional scaling (nMDS)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/15-nMDS.ipynb)
 -   **[Lecture 14]** Topic 12: 17 Redundancy analysis (RDA)
 -   **[Lecture 15]** Topic 13: 18 Canonical correspondence analysis (CCA)
