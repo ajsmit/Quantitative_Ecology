@@ -53,6 +53,7 @@ round(sum(spe_ca$CA$eig[1:2]) / sum(spe_ca$CA$eig) * 100, 2)
 
 par(mfrow = c(1, 2))
 plot(spe_ca, scaling = 1, main = "CA fish abundances - biplot scaling 1")
+# choices = c(1, 2)
 plot(spe_ca, scaling = 2, main = "CA fish abundances - biplot scaling 2")
 
 # Scaling 1: This scaling emphasises relationships between rows accurately in low-dimensional ordination space. Distances among objects (samples or sites) in the biplot are approximations of their 𝜒2  distances in multidimensional space. Objects found near a point representing a species are likely to contain a high contribution of that species.
