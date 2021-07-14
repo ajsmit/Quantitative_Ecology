@@ -1,5 +1,5 @@
 # Quantitative Ecology (BCB743)
-# Correspndence Analysis
+# Correspondence Analysis
 # Author: AJ Smit
 # Date: 14 July 2021
 
