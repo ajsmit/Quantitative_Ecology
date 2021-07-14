@@ -44,4 +44,4 @@ vignettes/*.pdf
 .Renviron
 
 # Misc
-private/
+# private/
