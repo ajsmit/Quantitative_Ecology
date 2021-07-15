@@ -58,16 +58,16 @@ These materials are incomplete...
 ### Ordinations
 
 -   **[Lecture 8]** Topic 7: 12 Introduction to ordination (theory only; refer to PDF slides and lecture video)
--   **[Lecture 9]** Topic 8: [13 Principal component analysis (PCA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/12-PCA.ipynb)
+-   **[Lecture 9]** Topic 8: [13 Principal component analysis (PCA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/13-PCA.ipynb)
 
 ## Week 4
 
 -   **[Self study]** Topic 8: 13 Principal component analysis (PCA) (continue; lecture slot 10 unused)
--   **[Lecture 11]** Topic 9: [14 Correspondence analysis (CA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/13-CA.ipynb)
--   **[Lecture 12]** Topic 10: [15 Principal coordinate analysis (PCoA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/14-PCoA.ipynb)
+-   **[Lecture 11]** Topic 9: [14 Correspondence analysis (CA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/14-CA.ipynb)
+-   **[Lecture 12]** Topic 10: [15 Principal coordinate analysis (PCoA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/15-PCoA.ipynb)
 
 ## Week 5
 
--   **[Lecture 13]** Topic 11: [16 non-Metric multi-dimensional scaling (nMDS)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/15-nMDS.ipynb)
+-   **[Lecture 13]** Topic 11: [16 non-Metric multi-dimensional scaling (nMDS)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/16-nMDS.ipynb)
 -   **[Lecture 14]** Topic 12: 17 Redundancy analysis (RDA)
 -   **[Lecture 15]** Topic 13: 18 Canonical correspondence analysis (CCA)
