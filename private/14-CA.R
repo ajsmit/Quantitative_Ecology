@@ -21,7 +21,7 @@ head(spe, 8)
 
 spe_ca <- cca(spe) # !!! Why?
 
-# one of the rows sum to 0
+# one of the rows sums to 0
 # which?
 apply(spe, 1, sum)
 
