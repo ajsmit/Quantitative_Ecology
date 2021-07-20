@@ -80,7 +80,10 @@ round(sum(rda_final$CCA$eig) / rda_final$tot.chi * 100, 2)
 scores(rda_final, display = "bp", choices = c(1:2))
 
 # The ordiplots in Fig. 2:
+# use scaling = 1 or scaling = 2 for site and species scaling, respectively
 rda_final_scrs <- scores(rda_final, display = c("sp","wa","lc","bp","cn"))
+# see ?plot.cca for insight into the use of lc vs wa scores
+# below I splot the wa (site) scores
 site_scores <- data.frame(rda_final_scrs$constraints)
 site_scores$bioreg <- bioreg$bolton
 site_scores$section <- seq(1:58)
@@ -101,8 +104,8 @@ ggplot(data = site_scores, aes(x, y, colour = Bioregion)) +
                arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
                color = "lightseagreen", alpha = 1, size = 0.7) +
   xlab("CAP1") + ylab("CAP2") +
+  labs(colour = "Bioregions") +
   ggtitle(expression(paste("Significant thermal variables and ", beta[sim]))) +
-  theme_grey() +
   theme(panel.grid.minor = element_blank(),
         legend.position = "none",
         aspect.ratio = 0.8)
