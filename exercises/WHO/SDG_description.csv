@@ -1,0 +1,39 @@
+SDG,Indicator
+other_1,Life expectancy at birth (years)
+other_2,Life expectancy at age 60 (years)
+SDG1.a,Domestic general government health expenditure (GGHE-D) as percentage of general government expenditure (GGE) (%)
+SDG16.1,Estimates of rates of homicides per 100 000 population
+SDG3.1_1,Maternal mortality ratio (per 100 000 live births)
+SDG3.1_2,Births attended by skilled health personnel (%)
+SDG3.2_1,Number of neonatal deaths
+SDG3.2_2,Number of under-five deaths
+SDG3.2_3,Number of infant deaths
+SDG3.3_1,New HIV infections (per 1000 uninfected population)
+SDG3.3_2,Incidence of tuberculosis (per 100 000 population per year)
+SDG3.3_3,Malaria incidence (per 1 000 population at risk)
+SDG3.3_4,Hepatitis B surface antigen (HBsAg) prevalence among children under 5 years (%)
+SDG3.3_5,Reported number of people requiring interventions against NTDs
+SDG3.4_1,Adult mortality rate (probability of dying between 15 and 60 years per 1000 population)
+SDG3.4_2,Diabetes mellitus
+SDG3.4_3,Cardiovascular diseases
+SDG3.4_4,Respiratory diseases
+SDG3.4_5,Crude suicide rates (per 100 000 population)
+SDG3.4_6,Total NCD Deaths (in thousands)
+SDG3.5,"Alcohol, total per capita (15+) consumption (in litres of pure alcohol) (SDG Indicator 3.5.2)"
+SDG3.6,Estimated road traffic death rate (per 100 000 population)
+SDG3.7,Adolescent birth rate (per 1000 women aged 15-19 years)
+SDG3.8_1,Data availability for UHC index of essential service coverage (%)
+SDG3.8_2,UHC index of essential service coverage
+SDG3.9_1,Mortality rate attributed to unintentional poisoning (per 100 000 population)
+SDG3.9_3,Mortality rate attributed to exposure to unsafe WASH services (per 100 000 population) (SDG 3.9.2)
+SDG3.a,Age-standardized prevalence of current tobacco smoking among persons aged 15 years and older
+SDG3.b_1,"Total net official development assistance to medical research and basic health sectors per capita (US$), by recipient country"
+SDG3.b_2,Measles-containing-vaccine second-dose (MCV2) immunization coverage by the nationally recommended age (%)
+SDG3.b_3,Diphtheria tetanus toxoid and pertussis (DTP3) immunization coverage among 1-year-olds (%)
+SDG3.b_4,Pneumoccocal conjugate vaccines (PCV3) immunization coverage among 1-year-olds (%)
+SDG3.b_5,Girls aged 15 years old that received the recommended doses of HPV vaccine (%)
+SDG3.c_1,"Medical doctors (per 10,000)"
+SDG3.c_2,"Nursing and midwifery personnel (per 10,000)"
+SDG3.c_3,"Dentists (per 10,000)"
+SDG3.c_4,"Pharmacists  (per 10,000)"
+SDG3.d_1,Average of 13 International Health Regulations core capacity scores
