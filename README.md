@@ -63,7 +63,7 @@ These materials are incomplete...
 ## Week 4
 
 -   **[Self study]** Topic 8: Principal component analysis (PCA) (continue; lecture slot 10 unused)
--   **[Example]** Topic 8: [PCA of World Health Organization data on progress towards attaining SDGs](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Topic_8-PCA-SDG-example.ipynb)
+-   **[Self study]** Topic 8: [PCA of World Health Organization data on progress towards attaining SDGs](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Topic_8-PCA-SDG-example.ipynb)
 -   **[Lecture 11]** Topic 9: [Correspondence analysis (CA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Topic_9-CA.ipynb)
 -   **[Lecture 12]** Topic 10: [Principal coordinate analysis (PCoA)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Topic_10-PCoA.ipynb)
 
