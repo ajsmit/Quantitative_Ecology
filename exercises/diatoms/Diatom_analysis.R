@@ -3,7 +3,7 @@
 # This script reproduces the analysis in Mayombo et al (2019).
 
 library(vegan)
-#library(BiodiversityR)
+# library(BiodiversityR)
 library(tidyverse)
 library(ggplot2)
 library(plyr)
@@ -42,12 +42,15 @@ library(tibble)
 # with shortened name to fix nMDS overplotting
 spp <- read.csv(file = "exercises/diatoms/PB_data_matrix_abrev.csv",
                 row.names = "Replicate", sep = ",", header = TRUE)
+
 # with full names
 spp2 <- read.csv(file = "exercises/diatoms/PB_data_matrix.csv",
                  row.names = "Replicate", sep = ",", header = TRUE)
+
 # remove ".spp" from column header name
 colnames(spp) <- str_replace(colnames(spp), "\\.spp", "")
 colnames(spp2) <- str_replace(colnames(spp2), "\\.spp", "")
+
 # Logarithmic transformation as suggested by Anderson et al. (2006): log_b (x) + 1 for x > 0, where b is the base of the logarithm; zeros are left as zeros. Higher bases give less weight to quantities and more to presences.
 spp.log <- decostand(spp, method = "log")
 spp.log.dis <- vegdist(spp.log, method = "bray")
@@ -56,7 +59,7 @@ spp.log.dis <- vegdist(spp.log, method = "bray")
 # the content is described above; these variables are categorical vars -- they are not actually
 # 'environmental' data, but their purpose in the analysis is analogous to true environmental data;
 # it's simply data that describe where the samples were taken from.
-env <- as.tibble(read.csv(file = "exercises/diatoms/PB_diat_env.csv",
+env <- tibble(read.csv(file = "exercises/diatoms/PB_diat_env.csv",
                           sep = ",", header = TRUE))
 env$plant <- as.factor(env$plant)
 env$rep <- as.factor(env$rep)
@@ -116,9 +119,13 @@ permutest(mod.size) # nope...
 # "If you have a nested error structure, so that you do not want your data be
 # shuffled over classes (strata), you should define strata in your permutation"
 # -- Jari Oksannen
+
+perm <- how(nperm = 199)
+setBlocks(perm) <- with(env, plant)
+
 (perm.1 <- adonis2(spp.log.dis ~ (host_spp * host_size) / plant,
-                   strata = plant,
-                   method = p, data = env))
+                   method = p, data = env,
+                   permutations = perm))
 
 # within subjects effects
 # (perm.2 <- adonis2(spp.log.dis ~ host_spp * host_size + plant,
@@ -142,28 +149,31 @@ plot(ef, p.max = 0.1)
 
 # set things up for the panel of plots (Figure 3)
 # output will appear in a PDF in the path specified below (change on own computer)
-pdf(file = "exercises/diatoms/Figure__3.pdf", width = 8, height = 7)
-col <- c("indianred", "darkturquoise")
+# pdf(file = "exercises/diatoms/Figure__3.pdf", width = 8, height = 7)
+col <- c("indianred3", "steelblue4")
 pch <- c(17, 19)
 opar <- par()
 plt1 <- layout(rbind(c(1, 1, 2, 2, 3, 3),
                      c(4, 4, 4, 5, 5, 5)),
                heights = c(2, 3),
                respect = TRUE)
-layout.show(plt1)
+
+# layout.show(plt1)
+
 par(mar = c(3,3,1,1))
 
 # plot 1
 plot(mod.spp, main = NULL,
      tck = .05, mgp = c(1.8, 0.5, 0), col = col, pch = pch,
      sub = NULL)
+
 # plot 2
 plot(mod.size, main = NULL,
      tck = .05, mgp = c(1.8, 0.5, 0), col = col, pch = pch,
      sub = NULL)
 
 # plot 3
-stressplot(spp.nmds,
+stressplot(spp.nmds, p.col = "steelblue4", l.col = "indianred3",
            tck = .05, mgp = c(1.8, 0.5, 0))
 
 # plot 4
@@ -181,7 +191,7 @@ with(env,
                 col = col))
 with(env, ordiellipse(spp.nmds, groups = host_spp,
                       col = col, label = FALSE))
-points(spp.nmds, display = "species", pch = 1, col = "deeppink")
+points(spp.nmds, display = "species", pch = 1, col = "seagreen")
 orditorp(spp.nmds, display = "species", cex = 0.8,
          col = "black", air = 0.01)
 
@@ -200,10 +210,10 @@ with(env,
                 col = col))
 with(env, ordiellipse(spp.nmds, groups = host_size,
                       col = col, label = FALSE))
-points(spp.nmds, display = "species", pch = 1, col = "deeppink")
+points(spp.nmds, display = "species", pch = 1, col = "seagreen")
 orditorp(spp.nmds, display = "species", cex = 0.8,
          col = "black", air = 0.01)
-dev.off()
+# dev.off()
 par(opar)
 
 # END MAKING FIGURE -------------------------------------------------------
@@ -258,7 +268,7 @@ plt1 <- spp2 %>%
   geom_point(aes(colour = host_size, shape = host_size),
              position = position_dodge2(width = 0.8),
              alpha = 0.6, size = 2.5) +
-  scale_colour_manual(name = "Age", values = c("red3", "blue3")) +
+  scale_colour_manual(name = "Age", values = c("indianred3", "steelblue4")) +
   scale_shape_manual(name = "Age", values = c(17, 19)) +
   annotate("text", x = 15, y = 3, size = 4.5,
            label = expression(paste(italic("p"), "=0.017"))) +
@@ -267,7 +277,7 @@ plt1 <- spp2 %>%
   scale_y_continuous(name = "Log abundance") +
   coord_flip() + theme_bw() +
   theme(panel.grid.major = element_line(linetype = "dashed",
-                                        colour = "turquoise", size = 0.2),
+                                        colour = "seagreen3", size = 0.2),
         panel.grid.minor = element_blank(),
         axis.text.x = element_text(size = 13, color = "black",
                                    margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm")),

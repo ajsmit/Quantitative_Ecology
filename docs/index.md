@@ -73,6 +73,7 @@ These materials are incomplete...
 ## Week 5
 
 -   **[Lecture 13]** Topic 11: [non-Metric multi-dimensional scaling (nMDS)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Topic_11-nMDS.ipynb)
+-   **[Self study]** Topic 11: [nMDS + PERMANOVA analysis of diatom data (Mayombo et al., 2019)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Topic_11-nMDS-Diatom_analysis.ipynb)
 -   **[Lecture 14]** Topic 12: [Constrained ordination](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Topic_12-Constrained_ordination.ipynb)
 -   **[Self study]** All topics: Review and assignments (lecture slot 15 unused)
 
