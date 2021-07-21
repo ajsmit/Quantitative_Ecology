@@ -78,5 +78,4 @@ These materials are incomplete...
 
 ## Week 6
 
--   **[Lecture 15]** Topic 13: Cluster analysis
-
+-   **[Lecture 16]** Topic 13: Cluster analysis
