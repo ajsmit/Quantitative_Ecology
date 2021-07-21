@@ -10,24 +10,28 @@ library(grid)
 library(gridBase)
 library(tidyr)
 
+
+# Load and prep the various data ------------------------------------------
+
 spp <- read.csv('/Users/ajsmit/Dropbox/R/workshops/Quantitative_Ecology/exercises/diversity/SeaweedsSpp.csv')
 spp <- dplyr::select(spp, -1)
 dim(spp)
 
+# decompose into turnover and nestedness-resultant components:
 Y_core <- betapart.core(spp)
 Y_pair <- beta.pair(Y_core, index.family = "sor")
 
-# Let Y1 be the turnover component (beta-sim):
+# let Y1 be the turnover component (beta-sim):
 Y1 <- as.matrix(Y_pair$beta.sim)
 
 load("/Users/ajsmit/Dropbox/R/workshops/Quantitative_Ecology/exercises/diversity/SeaweedEnv.RData")
 dim(env)
 
-# I select only some of the thermal vars; the rest are collinear with some of the ones I import:
+# select only some of the thermal vars; the rest are collinear with some of the ones I import:
 E1 <- dplyr::select(env, febMean, febRange, febSD, augMean,
                     augRange, augSD, annMean, annRange, annSD)
 
-# Calculate z-scores:
+# calculate z-scores:
 E1 <- decostand(E1, method = "standardize")
 
 bioreg <- read.csv('/Users/ajsmit/Dropbox/R/workshops/Quantitative_Ecology/exercises/diversity/bioregions.csv', header = TRUE)
@@ -38,20 +42,29 @@ sites <- sites[, c(2, 1)]
 head(sites)
 dim(sites)
 
-# fit the full model:
+
+# Fit the full RDA --------------------------------------------------------
+
 rda_full <- capscale(Y1 ~., E1)
 rda_full
 # summary(rda_full)
 
+# is the fit significant?
 anova(rda_full, parallel = 4) # ... yes!
 
+# what is the R2?
 rda_full_R2 <- RsquareAdj(rda_full)$adj.r.squared
 round(rda_full_R2, 2)
 
+# what prop of the overall variance do the constraints explain?
 round(sum(rda_full$CCA$eig) / rda_full$tot.chi * 100, 2) # in %
+
+
+# Do the VIFs -------------------------------------------------------------
 
 vif.cca(rda_full)
 
+# drop vars one at a time, starting with the highest VIF...
 E2 <- dplyr::select(E1, -annMean)
 rda_sel1 <- capscale(Y1 ~., E2)
 vif.cca(rda_sel1)
@@ -60,23 +73,33 @@ E3 <- dplyr::select(E2, -febMean)
 rda_sel2 <- capscale(Y1 ~., E3)
 vif.cca(rda_sel2)
 
+
+# The final model ---------------------------------------------------------
+
+# this is the final model:
 rda_final <- rda_sel2
 
 # is the fit significant?
 anova(rda_final, parallel = 4) # ... yes!
 
+# which reduced axes are significant?
 anova(rda_final, by = "axis", parallel = 4) # ... yes!
 
+# which vars are important in explaining the variation?
 (rda_final_axis_test <- anova(rda_final, by = "terms", parallel = 4))
 
+# extract only the ones to keep:
 rda_final_ax <- which(rda_final_axis_test[, 4] < 0.05)
 rda_final_sign_ax <- colnames(E3[,rda_final_ax])
 rda_final_sign_ax
 
+# the final R2:
 round(rda_final_R2 <- RsquareAdj(rda_final)$adj.r.squared, 2) # %
 
+# the proportion of var explained by the final model:
 round(sum(rda_final$CCA$eig) / rda_final$tot.chi * 100, 2)
 
+# we can extract all kinds of scores, e.g.:
 scores(rda_final, display = "bp", choices = c(1:2))
 
 # The ordiplots in Fig. 2:
