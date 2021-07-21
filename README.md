@@ -71,6 +71,9 @@ These materials are incomplete...
 
 -   **[Lecture 13]** Topic 11: [non-Metric multi-dimensional scaling (nMDS)](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Topic_11-nMDS.ipynb)
 -   **[Lecture 14]** Topic 12: [Constrained ordination](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Topic_12-Constrained_ordination.ipynb)
--   **[Lecture 15]** Topic 13: Cluster analysis
+-   **[Self study]** All topics: Review and assignments (lecture slot 15 unused)
 
 ## Week 6
+
+-   **[Lecture 15]** Topic 13: Cluster analysis
+
