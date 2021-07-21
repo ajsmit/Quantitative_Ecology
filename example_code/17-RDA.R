@@ -49,12 +49,27 @@ rda_full <- capscale(Y1 ~., E1)
 rda_full
 # summary(rda_full)
 
+# Partitioning of squared Unknown distance:
+#                 Inertia Proportion
+# Total           7.892     1.0000
+# Constrained     6.864     0.8697
+# Unconstrained   1.028     0.1303
+
 # is the fit significant?
 anova(rda_full, parallel = 4) # ... yes!
 
 # what is the R2?
 rda_full_R2 <- RsquareAdj(rda_full)$adj.r.squared
 round(rda_full_R2, 2)
+
+# inertia accounted for by constraints
+round(sum(rda_full$CCA$eig), 2)
+
+# remaining (unconstrained) inertia
+round(sum(rda_full$CA$eig), 2)
+
+# total inertia
+rda_full$tot.chi
 
 # what prop of the overall variance do the constraints explain?
 round(sum(rda_full$CCA$eig) / rda_full$tot.chi * 100, 2) # in %
@@ -101,6 +116,9 @@ round(sum(rda_final$CCA$eig) / rda_final$tot.chi * 100, 2)
 
 # we can extract all kinds of scores, e.g.:
 scores(rda_final, display = "bp", choices = c(1:2))
+
+
+# Make ordination plots in ggplot2 ----------------------------------------
 
 # The ordiplots in Fig. 2:
 # use scaling = 1 or scaling = 2 for site and species scaling, respectively
