@@ -14,11 +14,11 @@ spp <- read.csv('/Users/ajsmit/Dropbox/R/workshops/Quantitative_Ecology/exercise
 spp <- dplyr::select(spp, -1)
 dim(spp)
 
-Y.core <- betapart.core(spp)
-Y.pair <- beta.pair(Y.core, index.family = "sor")
+Y_core <- betapart.core(spp)
+Y_pair <- beta.pair(Y_core, index.family = "sor")
 
 # Let Y1 be the turnover component (beta-sim):
-Y1 <- as.matrix(Y.pair$beta.sim)
+Y1 <- as.matrix(Y_pair$beta.sim)
 
 load("/Users/ajsmit/Dropbox/R/workshops/Quantitative_Ecology/exercises/diversity/SeaweedEnv.RData")
 dim(env)
@@ -81,33 +81,86 @@ scores(rda_final, display = "bp", choices = c(1:2))
 
 # The ordiplots in Fig. 2:
 # use scaling = 1 or scaling = 2 for site and species scaling, respectively
-rda_final_scrs <- scores(rda_final, display = c("sp","wa","lc","bp","cn"))
+rda_final_scrs <- scores(rda_final, display = c("sp", "wa", "lc", "bp"))
 # see ?plot.cca for insight into the use of lc vs wa scores
-# below I splot the wa (site) scores
-site_scores <- data.frame(rda_final_scrs$constraints)
+# below I splot the wa (site) scores rather than lc (constraints) scores
+site_scores <- data.frame(rda_final_scrs$site) # the wa scores
 site_scores$bioreg <- bioreg$bolton
 site_scores$section <- seq(1:58)
-colnames(site_scores) <- c("x", "y", "Bioregion", "Section")
 
 biplot_scores <- data.frame(rda_final_scrs$biplot)
 biplot_scores$labels <- rownames(biplot_scores)
 biplot_scores_sign <- biplot_scores[biplot_scores$labels %in% rda_final_sign_ax,]
 
-ggplot(data = site_scores, aes(x, y, colour = Bioregion)) +
+ggplot(data = site_scores, aes(x = CAP1, y = CAP2, colour = bioreg)) +
   geom_point(size = 5.0, shape = 24, fill = "white") +
-  geom_text(aes(label = Section), size = 3.0, col = "black") +
+  geom_text(aes(label = section), size = 3.0, col = "black") +
   geom_label(data = biplot_scores_sign,
-            aes(CAP1, CAP2, label = rownames(biplot_scores_sign)),
-            color = "black") +
+             aes(CAP1, CAP2, label = rownames(biplot_scores_sign)),
+             color = "black") +
   geom_segment(data = biplot_scores_sign,
                aes(x = 0, y = 0, xend = CAP1, yend = CAP2),
                arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
                color = "lightseagreen", alpha = 1, size = 0.7) +
   xlab("CAP1") + ylab("CAP2") +
-  labs(colour = "Bioregions") +
   ggtitle(expression(paste("Significant thermal variables and ", beta[sim]))) +
+  theme_grey() +
   theme(panel.grid.minor = element_blank(),
         legend.position = "none",
         aspect.ratio = 0.8)
 
+# Gower distance on mixed var types
 
+head(env)
+head(bioreg)
+E4 <- cbind(bioreg, E3) %>%
+  mutate(spal.prov = factor(spal.prov),
+         spal.ecoreg = factor(spal.ecoreg),
+         lombard = factor(lombard),
+         bolton = factor(bolton))
+head(E4)
+str(E4)
+
+# Dealing with factor vars
+E4 <- E3
+E4$bioreg <- bioreg$bolton
+head(E4)
+rda_cat <- capscale(Y1 ~., E4)
+plot(rda_cat)
+
+# make a ggplot ordiplot
+# use scaling = 1 or scaling = 2 for site and species scaling, respectively
+rda_cat_scrs <- scores(rda_cat, display = c("sp", "wa", "lc", "bp", "cn"))
+# see ?plot.cca for insight into the use of lc vs wa scores
+# below I splot the wa (site) scores rather than lc (constraints) scores
+site_scores <- data.frame(rda_cat_scrs$site) # the wa scores
+site_scores$bioreg <- bioreg$bolton
+site_scores$section <- seq(1:58)
+
+biplot_scores <- data.frame(rda_cat_scrs$biplot)
+biplot_scores$labels <- rownames(biplot_scores)
+biplot_scores_sign <- biplot_scores[biplot_scores$labels %in% rda_final_sign_ax,]
+
+bioreg_centroids <- data.frame(rda_cat_scrs$centroids)
+bioreg_centroids$labels <- rownames(bioreg_centroids)
+
+ggplot(data = site_scores, aes(CAP1, CAP2, colour = bioreg)) +
+  geom_point(size = 5.0, shape = 24, fill = "white") +
+  geom_text(aes(label = section), size = 3.0, col = "black") +
+  geom_label(data = biplot_scores_sign,
+             aes(CAP1, CAP2, label = rownames(biplot_scores_sign)),
+             color = "black") +
+  geom_segment(data = biplot_scores_sign,
+               aes(x = 0, y = 0, xend = CAP1, yend = CAP2),
+               arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
+               color = "lightseagreen", alpha = 1, size = 0.7) +
+  geom_label(data = bioreg_centroids,
+             aes(x = CAP1, y = CAP2,
+                 label = labels), size = 4.0,
+             col = "black", fill = "yellow") +
+  xlab("CAP1") + ylab("CAP2") +
+  ggtitle(expression(paste("Significant thermal variables and ", beta[sim]))) +
+  theme_grey() +
+  theme(panel.grid.minor = element_blank(),
+        legend.position = "none",
+        aspect.ratio = 0.8)
