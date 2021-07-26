@@ -79,4 +79,4 @@ These materials are incomplete...
 
 ## Week 6
 
--   **[Lecture 16]** Topic 13: Cluster analysis
+-   **[Lecture 16]** Topic 13: [Cluster analysis](https://github.com/ajsmit/Quantitative_Ecology/blob/main/jupyter_lab/Topic_13-Cluster_analysis.ipynb)
