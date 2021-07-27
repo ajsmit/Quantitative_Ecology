@@ -15,7 +15,10 @@ unique(SDGs$ParentLocation)
 length(unique(SDGs$ParentLocation))
 length(SDGs$Location)
 
+colnames(SDGs[, 3:ncol(SDGs)])
+
 corr <- round(cor(SDGs[3:ncol(SDGs)]), 1)
+corr[lower.tri(corr)] <- NA
 ggcorrplot(corr, type = 'upper', outline.col = "white",
            colors = c("#1679a1", "white", "#f8766d"),
            lab = TRUE)
