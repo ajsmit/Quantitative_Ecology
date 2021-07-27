@@ -21,6 +21,7 @@ ggcorrplot(corr, type = 'upper', outline.col = "white",
            lab = TRUE)
 
 SDGs_std <- decostand(SDGs[3:ncol(SDGs)], method = "standardize")
+rownames(SDGs_std) <- SDGs$Location
 
 
 # pam clustering ----------------------------------------------------------
@@ -36,8 +37,8 @@ fviz_nbclust(SDGs_std, cluster::pam, method = "wss") + theme_grey()
 # gap statistics
 fviz_nbclust(SDGs_std, cluster::pam, method = "gap_stat") + theme_grey()
 
-SDGs_pam <- pam(SDGs_std, metric = "euclidean", k = 2)
-
+SDGs_pam <- pam(SDGs_std, metric = "euclidean", k = 3)
+SDGs_pam
 
 # Create plots ------------------------------------------------------------
 
@@ -62,9 +63,7 @@ SDGs_clustered2 <- SDGs |>
   group_by(cluster) |>
   summarise_at(vars(other_1:SDG3.b_5), mean, na.rm = TRUE)
 
-pairs(SDGs[, 3:(ncol(SDGs) - 3)])
-
 pairs(SDGs[, 3:15], col = c("#FC4E07", "navy")[SDGs_pam$clustering])
 
+SDGs_pam
 
-col = c(1:6)[SDGs_pam$clustering]
