@@ -6,7 +6,7 @@ library(ggcorrplot)
 library(factoextra)
 # library(gridExtra)
 library(vegan)
-library(Rtsne) # for t-SNE plot
+# library(Rtsne) # for t-SNE plot
 
 SDGs <- read_csv("/Users/ajsmit/Dropbox/R/workshops/Quantitative_Ecology/exercises/WHO/SDG_complete.csv")
 head(SDGs)

@@ -18,6 +18,51 @@ These multivariate datasets have far more information in them than can de detect
 
 These links point to online resources such as datasets and R scripts in support of the video and PDF lecture material. It is essential that you work through these examples and workflows.
 
+You will encounter the following functions for the first time in this module:
+
+-   `adonis2()`
+-   `anova.betadisper()`
+-   `anova.cca()`
+-   `anova.manyglm()`
+-   `beta.pair()`
+-   `betadisper()`
+-   `betapart.core()`
+-   `biplot()`
+-   `cca()`
+-   `capscale()`
+-   `cleanplot.pca()`
+-   `daisy()`
+-   `decostand()`
+-   `diag()`
+-   `diversity()`
+-   `diversityresult()`
+-   `fviz_nbclust()`
+-   `fviz_cluster()`
+-   `fviz_silhouette()`
+-   `geodist()`
+-   `ggcorrplot()`
+-   `goodness()`
+-   `imputePCA()`
+-   `lowerTriangle()`
+-   `manyglm()`
+-   `meanvar.plot()`
+-   `metaMDS()`
+-   `mvabund()`
+-   `ordiellipse()`
+-   `ordiplot()`
+-   `ordispider()`
+-   `ordisurf()`
+-   `pam()`
+-   `permutest()`
+-   `rda()`
+-   `RsquareAdj()`
+-   `scores()`
+-   `specnumber()`
+-   `stressplot()`
+-   `t()`
+-   `vegdist()`
+-   `vif.cca()`
+
 ## Week 1
 
 ### Introduction
