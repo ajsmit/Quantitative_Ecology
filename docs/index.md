@@ -19,8 +19,6 @@ These multivariate datasets have far more information in them than can de detect
 
 # Supplementary Content
 
-These links point to online resources such as datasets and R scripts in support of the video and PDF lecture material. It is essential that you work through these examples and workflows.
-
 You will encounter the following functions for the first time in this module:
 
 -   `adonis2()` -- Permutational Multivariate Analysis of Variance Using Distance Matrices
@@ -65,6 +63,8 @@ You will encounter the following functions for the first time in this module:
 -   `t()` -- Matrix Transpose
 -   `vegdist()` -- Dissimilarity Indices for Community Ecologists
 -   `vif.cca()` -- Diagnostic Tools for [Constrained] Ordination (CCA, RDA, DCA, CA, PCA)
+
+These links point to online resources such as datasets and R scripts in support of the video and PDF lecture material. It is essential that you work through these examples and workflows.
 
 ## Week 1
 
