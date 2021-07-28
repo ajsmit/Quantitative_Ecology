@@ -20,48 +20,48 @@ These links point to online resources such as datasets and R scripts in support 
 
 You will encounter the following functions for the first time in this module:
 
--   `adonis2()`
--   `anova.betadisper()`
--   `anova.cca()`
--   `anova.manyglm()`
--   `beta.pair()`
--   `betadisper()`
--   `betapart.core()`
--   `biplot()`
--   `cca()`
--   `capscale()`
--   `cleanplot.pca()`
--   `daisy()`
--   `decostand()`
--   `diag()`
--   `diversity()`
--   `diversityresult()`
--   `fviz_nbclust()`
--   `fviz_cluster()`
--   `fviz_silhouette()`
--   `geodist()`
--   `ggcorrplot()`
--   `goodness()`
--   `imputePCA()`
--   `lowerTriangle()`
--   `manyglm()`
--   `meanvar.plot()`
--   `metaMDS()`
--   `mvabund()`
--   `ordiellipse()`
--   `ordiplot()`
--   `ordispider()`
--   `ordisurf()`
--   `pam()`
--   `permutest()`
--   `rda()`
--   `RsquareAdj()`
--   `scores()`
--   `specnumber()`
--   `stressplot()`
--   `t()`
--   `vegdist()`
--   `vif.cca()`
+-   `adonis2()` -- Permutational Multivariate Analysis of Variance Using Distance Matrices
+-   `anova.betadisper()` -- PERMDIST 2 for Multivariate homogeneity of groups dispersions (variances)
+-   `anova.cca()` -- Permutation Test for Constrained Correspondence Analysis, Redundancy Analysis and Constrained Analysis of Principal Coordinates
+-   `anova.manyglm()` -- Analysis of Deviance for Multivariate Generalized Linear Model Fits for Abundance Data
+-   `beta.pair()` -- Incidence-based pair-wise dissimilarities
+-   `betadisper()` -- Multivariate homogeneity of groups dispersions (variances)
+-   `betapart.core()` -- Core calculations of betapart
+-   `biplot()` -- Biplot of Multivariate Data
+-   `capscale()` -- [Partial] Distance-based Redundancy Analysis
+-   `cca()` -- [Partial] [Constrained] Correspondence Analysis and Redundancy Analysis
+-   `cleanplot.pca()` -- Numerical Ecology in R's PCA plot
+-   `daisy()` -- Dissimilarity Matrix Calculation
+-   `decostand()` -- Standardization Methods for Community Ecology
+-   `diag()` - Matrix Diagonals
+-   `diversity()` -- Ecological Diversity Indices
+-   `diversityresult()` -- Alternative Diversity Results
+-   `fviz_cluster()` -- Visualize Clustering Results
+-   `fviz_nbclust()` -- Dertermining and Visualizing the Optimal Number of Clusters
+-   `fviz_silhouette()` -- Visualize Silhouette Information from Clustering
+-   `geodist()` -- Convert lon-lat coordinates into vector or matrix of geodesic distances in metres
+-   `ggcorrplot()` -- Visualization of a correlation matrix using ggplot2
+-   `goodness()` -- Diagnostic Tools for [Constrained] Ordination (CCA, RDA, DCA, CA, PCA)
+-   `imputePCA()` -- Impute dataset with PCA
+-   `lowerTriangle()` -- Extract or replace the upper/lower triangular portion of a matrix
+-   `manyglm()` -- Fitting Generalized Linear Models for Multivariate Abundance Data
+-   `meanvar.plot()` -- Construct Mean-Variance plots for Multivariate Abundance Data
+-   `metaMDS()` -- Nonmetric Multidimensional Scaling with Stable Solution from Random Starts, Axis Scaling and Species Scores
+-   `mvabund()` -- Multivariate Abundance Data Objects
+-   `ordiellipse()` -- Display Groups or Factor Levels in Ordination Diagrams
+-   `ordiplot()` -- Alternative plot and identify Functions for Ordination
+-   `ordispider()` -- Display Groups or Factor Levels in Ordination Diagrams
+-   `ordisurf()` -- Fit and Plot Smooth Surfaces of Variables on Ordination
+-   `pam()` -- Partitioning Around Medoids
+-   `permutest()` -- Permutation Test for Constrained Correspondence Analysis, Redundancy Analysis and Constrained Analysis of Principal Coordinates
+-   `rda()` -- [Partial] [Constrained] Correspondence Analysis and Redundancy Analysis
+-   `RsquareAdj()` -- Adjusted R-square
+-   `scores()` -- Get Species or Site Scores from an Ordination
+-   `specnumber()` -- Ecological Diversity Indices
+-   `stressplot()` -- Goodness of Fit and Shepard Plot for Nonmetric Multidimensional Scaling
+-   `t()` -- Matrix Transpose
+-   `vegdist()` -- Dissimilarity Indices for Community Ecologists
+-   `vif.cca()` -- Diagnostic Tools for [Constrained] Ordination (CCA, RDA, DCA, CA, PCA)
 
 ## Week 1
 
